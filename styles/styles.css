@@ -26,11 +26,17 @@ hr {
 }
 
 .click {
+    width: 10%;
     font-size: 15px;
     text-decoration: none;
     color: darkslategrey;
 }
 
-.click:hover {
+a, a:active, a:hover, a:visited {
+    text-decoration: none;
+    color: darkslategrey;
+}
+
+a:hover {
     color: lightgray;
 }
