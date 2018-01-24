@@ -19,25 +19,31 @@
         <h1 class="display-2" id="title">The Enigma Principle</h1>
         <hr>
         <div class="row" id="input">
-            <div class="col w-50">
-                <a href="#"><h6>join</h6></a>
+            <div class="col w-50 click">
+                <div id="join">join</div>
             </div>
-            <div class="col w-50">
-                <a href="#"><h6>continue</h6></a>
+            <div class="col w-50 click">
+                <div id="continue">continue</div>
             </div>
         </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
-        $('#main').hide();
+        $("#main").hide();
 
-        $(document).ready(function() {
-            $("#main").fadeIn("slow");
+        $(document).ready(function(){
+            $("#main").show("slow");
+
+            $( '.click' ).click(function() {
+                if($( '#main' ).is(":visible")){
+                    $( '#main' ).hide("slow");
+                } else{
+                    $( '#main' ).show("slow");
+                }
+            });
         });
-
     </script>
 </body>
 </html>
