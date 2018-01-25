@@ -28,9 +28,18 @@
                 </div>
             </div>
         </div>
-        <div>
-            <img src="http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png" id="firstCircle" alt="circle">
+        <div class="row">
+            <div class="col">
+                <img class="circle" src="http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png" id="secondCircle" alt="circle">
+            </div>
+            <div class="col">
+                <img class="circle" src="http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png" id="firstCircle" alt="circle">
+            </div>
+            <div class="col">
+                <img class="circle" src="http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png" id="thirdCircle" alt="circle">
+            </div>
         </div>
+
     </div>
 
     <!-- Bootstrap core JavaScript -->
@@ -38,27 +47,43 @@
     <script>
         $('#titleScreen').hide();
         $('#firstCircle').hide();
+        $('#secondCircle').hide();
+        $('#thirdCircle').hide();
 
         $(document).ready(function(){
-            $('#titleScreen').fadeIn("slow");
+            $('#titleScreen').delay("slow").fadeIn("slow");
 
             $('#join').on('click', function() {
                 $('#titleScreen').fadeOut("slow");
+                $('img').addClass('circle');
                 $('#firstCircle').delay("slow").fadeIn("slow");
             });
 
             $('#continue').on('click', function() {
                 $('#titleScreen').fadeOut("slow");
-            })
+            });
+
+            $('#firstCircle').on('click', function() {
+                $('#secondCircle').slideDown("slow");
+                $('#thirdCircle').slideDown("slow");
+                $('img').addClass('circle2');
+            });
+
+            $('.circle2').on('click', function() {
+                $(this).removeClass('circle');
+                $(this).prop('src', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Circle_Burgundy_Solid.svg/1024px-Circle_Burgundy_Solid.svg.png');
+            });
+
+            $('.circle').on('mouseover', function() {
+                $(this).prop('src', 'https://i.stack.imgur.com/YPMyN.png');
+            });
+
+            $('.circle').on('mouseout', function() {
+                $(this).prop('src', 'http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png');
+            });
         });
 
-        $('#firstCircle').on('mouseover', function() {
-            $('#firstCircle').delay("slow").prop('src', 'https://i.stack.imgur.com/YPMyN.png');
-        });
 
-        $('#firstCircle').on('mouseout', function() {
-            $('#firstCircle').delay("slow").prop('src', 'http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png');
-        });
     </script>
 </body>
 </html>

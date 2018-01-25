@@ -41,8 +41,7 @@ a:hover {
     color: lightgray;
 }
 
-#firstCircle {
+.circle, .circle2 {
     width: 100px;
     height: 100px;
-    background: url("http://www.pngmart.com/image/40935");
 }
