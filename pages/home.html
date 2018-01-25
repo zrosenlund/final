@@ -29,7 +29,7 @@
             </div>
         </div>
         <div>
-
+            <img src="http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png" id="firstCircle" alt="circle">
         </div>
     </div>
 
@@ -37,13 +37,27 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>
         $('#titleScreen').hide();
+        $('#firstCircle').hide();
 
         $(document).ready(function(){
             $('#titleScreen').fadeIn("slow");
 
-            $('.click').on('click', function() {
+            $('#join').on('click', function() {
                 $('#titleScreen').fadeOut("slow");
+                $('#firstCircle').delay("slow").fadeIn("slow");
             });
+
+            $('#continue').on('click', function() {
+                $('#titleScreen').fadeOut("slow");
+            })
+        });
+
+        $('#firstCircle').on('mouseover', function() {
+            $('#firstCircle').delay("slow").prop('src', 'https://i.stack.imgur.com/YPMyN.png');
+        });
+
+        $('#firstCircle').on('mouseout', function() {
+            $('#firstCircle').delay("slow").prop('src', 'http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png');
         });
     </script>
 </body>

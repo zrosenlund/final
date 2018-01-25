@@ -40,3 +40,9 @@ a, a:active, a:hover, a:visited {
 a:hover {
     color: lightgray;
 }
+
+#firstCircle {
+    width: 100px;
+    height: 100px;
+    background: url("http://www.pngmart.com/image/40935");
+}
