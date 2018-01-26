@@ -66,11 +66,9 @@
             $('#firstCircle').on('click', function() {
                 $('#secondCircle').slideDown("slow");
                 $('#thirdCircle').slideDown("slow");
-                $('img').addClass('circle2');
             });
 
-            $('.circle2').on('click', function() {
-                $(this).removeClass('circle');
+            $('.circle').on('click', function() {
                 $(this).prop('src', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Circle_Burgundy_Solid.svg/1024px-Circle_Burgundy_Solid.svg.png');
             });
 
