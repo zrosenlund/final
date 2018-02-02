@@ -15,7 +15,7 @@
     <title>The Enigma Principle</title>
 </head>
 <body>
-    <div class="container w-100 mx-auto d-flex justify-content-center align-items-center" id="main">
+    <div class="w-100 mx-auto d-flex justify-content-center align-items-center" id="main">
         <div class="flex-column" id="titleScreen">
             <h1 class="display-2" id="title">The Enigma Principle</h1>
             <hr>
@@ -30,14 +30,42 @@
         </div>
         <div class="row">
             <div class="col">
-                <img class="circle" src="http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png" id="secondCircle" alt="circle">
+                <img class="circle" src="../final/images/circle-outline.png" id="secondCircle" alt="circle">
             </div>
             <div class="col">
-                <img class="circle" src="http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png" id="firstCircle" alt="circle">
+                <img class="circle" src="../final/images/circle-outline.png" id="firstCircle" alt="circle">
             </div>
             <div class="col">
-                <img class="circle" src="http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png" id="thirdCircle" alt="circle">
+                <img class="circle" src="../final/images/circle-outline.png" id="thirdCircle" alt="circle">
             </div>
+        </div>
+        <div class=""id="formArea">
+            <form>
+                <div class="form-group">
+                    <label for="createUsername">Create Username</label>
+                    <input type="text" class="form-control" id="createUsername" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="createPassword1">Choose Password</label>
+                    <input type="password" class="form-control" id="createPassword1">
+                </div>
+                <div class="form-group">
+                    <label for="createPassword2">Verify Password</label>
+                    <input type="password" class="form-control" id="createPassword2">
+                </div>
+            </form>
+        </div>
+        <div class=""id="loginArea">
+            <form>
+                <div class="form-group">
+                    <label for="inputUsername">Enter Username</label>
+                    <input type="text" class="form-control" id="inputUsername" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword1">Enter Password</label>
+                    <input type="password" class="form-control" id="inputPassword1">
+                </div>
+            </form>
         </div>
 
     </div>
@@ -49,35 +77,37 @@
         $('#firstCircle').hide();
         $('#secondCircle').hide();
         $('#thirdCircle').hide();
+        $("#formArea").hide();
+        $("#loginArea").hide();
 
         $(document).ready(function(){
             $('#titleScreen').delay("slow").fadeIn("slow");
 
             $('#join').on('click', function() {
                 $('#titleScreen').fadeOut("slow");
-                $('img').addClass('circle');
                 $('#firstCircle').delay("slow").fadeIn("slow");
             });
 
             $('#continue').on('click', function() {
                 $('#titleScreen').fadeOut("slow");
+                $('#loginArea').delay("slow").fadeIn("slow");
             });
 
             $('#firstCircle').on('click', function() {
                 $('#secondCircle').slideDown("slow");
                 $('#thirdCircle').slideDown("slow");
+                $('img').addClass('circle');
             });
 
             $('.circle').on('click', function() {
-                $(this).prop('src', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Circle_Burgundy_Solid.svg/1024px-Circle_Burgundy_Solid.svg.png');
-            });
+                $(this).prop('src', '../final/images/circle-filled.png');
 
-            $('.circle').on('mouseover', function() {
-                $(this).prop('src', 'https://i.stack.imgur.com/YPMyN.png');
-            });
+                if ($('#firstCircle').attr('src') == '../final/images/circle-filled.png' && $('#secondCircle').attr('src') == '../final/images/circle-filled.png' && $('#thirdCircle').attr('src') == '../final/images/circle-filled.png')
+                {
+                    $('.circle').fadeOut("slow");
 
-            $('.circle').on('mouseout', function() {
-                $(this).prop('src', 'http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png');
+                    $('#formArea').delay("slow").fadeIn("slow");
+                }
             });
         });
 
