@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
     <title>The Enigma Principle</title>
 </head>
 <body>
     <div class="w-100 mx-auto d-flex justify-content-center align-items-center" id="main">
-        <div class="flex-column" id="titleScreen">
+        <div class="flex-column mx-auto" id="titleScreen">
             <h1 class="display-2" id="title">The Enigma Principle</h1>
             <hr>
             <div class="row text-center" id="input">
@@ -28,7 +29,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="circleArea">
             <div class="col">
                 <img class="circle" src="../final/images/circle-outline.png" id="secondCircle" alt="circle">
             </div>
@@ -39,8 +40,8 @@
                 <img class="circle" src="../final/images/circle-outline.png" id="thirdCircle" alt="circle">
             </div>
         </div>
-        <div class=""id="formArea">
-            <form>
+        <div id="formArea">
+            <form action="signup" method="post">
                 <div class="form-group">
                     <label for="createUsername">Create Username</label>
                     <input type="text" class="form-control" id="createUsername" aria-describedby="emailHelp">
@@ -53,10 +54,20 @@
                     <label for="createPassword2">Verify Password</label>
                     <input type="password" class="form-control" id="createPassword2">
                 </div>
+                <div class="form-group">
+                    <div class="row text-center">
+                        <div class="col click">
+                            <a href="#" id="back"> - back - </a>
+                        </div>
+                        <div class="col click">
+                            <a href="signup" name="submit" id="submit"> - submit - </a>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
-        <div class=""id="loginArea">
-            <form>
+        <div id="loginArea">
+            <form action="login" method="post">
                 <div class="form-group">
                     <label for="inputUsername">Enter Username</label>
                     <input type="text" class="form-control" id="inputUsername" aria-describedby="emailHelp">
@@ -65,6 +76,16 @@
                     <label for="inputPassword1">Enter Password</label>
                     <input type="password" class="form-control" id="inputPassword1">
                 </div>
+                <div class="form-group">
+                    <div class="row text-center">
+                        <div class="col click">
+                            <a href="#" id="back2"> - back - </a>
+                        </div>
+                        <div class="col click">
+                            <a href="login" name="submit2" id="submit2"> - submit - </a>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
 
@@ -72,46 +93,6 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script>
-        $('#titleScreen').hide();
-        $('#firstCircle').hide();
-        $('#secondCircle').hide();
-        $('#thirdCircle').hide();
-        $("#formArea").hide();
-        $("#loginArea").hide();
-
-        $(document).ready(function(){
-            $('#titleScreen').delay("slow").fadeIn("slow");
-
-            $('#join').on('click', function() {
-                $('#titleScreen').fadeOut("slow");
-                $('#firstCircle').delay("slow").fadeIn("slow");
-            });
-
-            $('#continue').on('click', function() {
-                $('#titleScreen').fadeOut("slow");
-                $('#loginArea').delay("slow").fadeIn("slow");
-            });
-
-            $('#firstCircle').on('click', function() {
-                $('#secondCircle').slideDown("slow");
-                $('#thirdCircle').slideDown("slow");
-                $('img').addClass('circle');
-            });
-
-            $('.circle').on('click', function() {
-                $(this).prop('src', '../final/images/circle-filled.png');
-
-                if ($('#firstCircle').attr('src') == '../final/images/circle-filled.png' && $('#secondCircle').attr('src') == '../final/images/circle-filled.png' && $('#thirdCircle').attr('src') == '../final/images/circle-filled.png')
-                {
-                    $('.circle').fadeOut("slow");
-
-                    $('#formArea').delay("slow").fadeIn("slow");
-                }
-            });
-        });
-
-
-    </script>
+    <script src="../final/js/home.js";></script>
 </body>
 </html>

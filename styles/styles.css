@@ -32,7 +32,7 @@ hr {
     color: mediumaquamarine;
 }
 
-a, a:active, a:hover, a:visited {
+a, a:active, a:hover, a:visited, .a, .a:active, .a:hover, .a:visited {
     text-decoration: none;
     color: mediumaquamarine;
 }
@@ -49,5 +49,6 @@ a:hover {
 input[type="text"], input[type="password"], textarea {
     background-color: mediumaquamarine;
     color: black;
+    font-family: 'Dhurjati', sans-serif;
 }
 
