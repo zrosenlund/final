@@ -21,13 +21,13 @@ $(document).ready(function(){
     });
 
     $('#firstCircle').on('click', function() {
+        $('img').addClass('circle');
         $('#secondCircle').slideDown("slow");
         $('#thirdCircle').slideDown("slow");
-        $('img').addClass('circle');
     });
 
     $('.circle').on('click', function() {
-        $(this).prop('src', '../final/images/circle-filled.png').fadeIn("slow");
+        $(this).prop('src', '../final/images/circle-filled.png');
 
         if ($('#firstCircle').attr('src') == '../final/images/circle-filled.png' && $('#secondCircle').attr('src') == '../final/images/circle-filled.png' && $('#thirdCircle').attr('src') == '../final/images/circle-filled.png')
         {
