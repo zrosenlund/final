@@ -29,19 +29,27 @@ hr {
     width: 10%;
     font-size: 15px;
     text-decoration: none;
-    color: darkslategrey;
+    color: mediumaquamarine;
 }
 
-a, a:active, a:hover, a:visited {
+a, a:active, a:hover, a:visited, .a, .a:active, .a:hover, .a:visited {
     text-decoration: none;
-    color: darkslategrey;
+    color: mediumaquamarine;
 }
 
 a:hover {
     color: lightgray;
 }
 
-.circle, .circle2 {
+#firstCircle, #secondCircle, #thirdCircle {
     width: 100px;
     height: 100px;
 }
+
+input[type="text"], input[type="password"], textarea {
+    background-color: mediumaquamarine;
+    color: black;
+    font-family: 'Dhurjati', sans-serif;
+}
+
+

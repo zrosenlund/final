@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
     <title>The Enigma Principle</title>
 </head>
 <body>
-    <div class="container w-100 mx-auto d-flex justify-content-center align-items-center" id="main">
-        <div class="flex-column" id="titleScreen">
+    <div class="w-100 mx-auto d-flex justify-content-center align-items-center" id="main">
+        <div class="flex-column mx-auto" id="titleScreen">
             <h1 class="display-2" id="title">The Enigma Principle</h1>
             <hr>
             <div class="row text-center" id="input">
@@ -28,60 +29,70 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="circleArea">
             <div class="col">
-                <img class="circle" src="http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png" id="secondCircle" alt="circle">
+                <img class="circle" src="../final/images/circle-outline.png" id="secondCircle" alt="circle">
             </div>
             <div class="col">
-                <img class="circle" src="http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png" id="firstCircle" alt="circle">
+                <img class="circle" src="../final/images/circle-outline.png" id="firstCircle" alt="circle">
             </div>
             <div class="col">
-                <img class="circle" src="http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png" id="thirdCircle" alt="circle">
+                <img class="circle" src="../final/images/circle-outline.png" id="thirdCircle" alt="circle">
             </div>
+        </div>
+        <div id="formArea">
+            <form id="signup" action="signup" method="post">
+                <div class="form-group">
+                    <label for="createUsername">Create Username</label>
+                    <input type="text" class="form-control" id="createUsername" name="createUsername" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="createPassword1">Choose Password</label>
+                    <input type="password" class="form-control" id="createPassword1" name="createPassword1">
+                </div>
+                <div class="form-group">
+                    <label for="createPassword2">Verify Password</label>
+                    <input type="password" class="form-control" id="createPassword2" name="createPassword2">
+                </div>
+                <div class="form-group">
+                    <div class="row text-center">
+                        <div class="col click">
+                            <a href="#" id="back"> - back - </a>
+                        </div>
+                        <div class="col click">
+                            <a href="#" onclick="document.getElementById('signup').submit();"> - submit - </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="loginArea">
+            <form id="login" action="login" method="post">
+                <div class="form-group">
+                    <label for="inputUsername">Enter Username</label>
+                    <input type="text" class="form-control" id="inputUsername" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword1">Enter Password</label>
+                    <input type="password" class="form-control" id="inputPassword1">
+                </div>
+                <div class="form-group">
+                    <div class="row text-center">
+                        <div class="col click">
+                            <a href="#" id="back2"> - back - </a>
+                        </div>
+                        <div class="col click">
+                            <a href="#" onclick="document.getElementById('login').submit();"> - submit - </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
 
     </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script>
-        $('#titleScreen').hide();
-        $('#firstCircle').hide();
-        $('#secondCircle').hide();
-        $('#thirdCircle').hide();
-
-        $(document).ready(function(){
-            $('#titleScreen').delay("slow").fadeIn("slow");
-
-            $('#join').on('click', function() {
-                $('#titleScreen').fadeOut("slow");
-                $('img').addClass('circle');
-                $('#firstCircle').delay("slow").fadeIn("slow");
-            });
-
-            $('#continue').on('click', function() {
-                $('#titleScreen').fadeOut("slow");
-            });
-
-            $('#firstCircle').on('click', function() {
-                $('#secondCircle').slideDown("slow");
-                $('#thirdCircle').slideDown("slow");
-            });
-
-            $('.circle').on('click', function() {
-                $(this).prop('src', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Circle_Burgundy_Solid.svg/1024px-Circle_Burgundy_Solid.svg.png');
-            });
-
-            $('.circle').on('mouseover', function() {
-                $(this).prop('src', 'https://i.stack.imgur.com/YPMyN.png');
-            });
-
-            $('.circle').on('mouseout', function() {
-                $(this).prop('src', 'http://www.pngmart.com/files/4/Circle-PNG-Transparent-Image.png');
-            });
-        });
-
-
-    </script>
+    <script src="../final/js/home.js";></script>
 </body>
 </html>
