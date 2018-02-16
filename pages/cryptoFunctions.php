@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 
-$results = binaryToLetters("01000101 01001110 01001001 01000111 01001101 01000001");
+$results = lettersShift("A B C D", 2);
 echo "$results";
 
 //function that converts numbers to letters
@@ -93,6 +93,34 @@ function binaryToLetters($string)
         $result .= $num." ";
     }
     return $result;
+}
+
+function lettersShift($string, $number)
+{
+    $lettersArray = array(1 => "A", 2 => "B", 3 => "C", 4 => "D", 5 => "E", 6 => "F",
+                          7 => "G", 8 => "H", 9 => "I", 10 => "J",11 => "K", 12 => "L",
+                          13 => "M", 14 => "N", 15 => "O", 16 => "P", 17 => "Q", 18 => "R",
+                          19=> "S", 20 => "T", 21 => "U", 22 => "V", 23 => "W", 24 => "X",
+                          25 => "Y", 26 => "Z");
+
+    //search through array for input
+    //initate variables
+    $result = $num = $shiftLetter= "";
+
+    //turn string into an array
+    $letters = explode(" ", $string, 30);
+
+    //loop through letters array searching through alpha array and put result into variable
+    foreach($letters as $letter)
+    {
+        $num = array_search($letter , $lettersArray);
+        $num = $num + $number;
+        $shiftLetter .= lettersArray[$num];
+    }
+    return $shiftLetter;
+
+    //shift the number given
+
 }
 
 
