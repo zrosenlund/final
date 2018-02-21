@@ -34,9 +34,9 @@
 
 </div>
 
-<footer id="footer" class="d-flex w-100 justify-content-center align-items-center mx-auto">
+<footer id="footer" class="d-flex w-100 justify-content-center align-items-center mx-auto text-center">
     <div class="form-group">
-        <input type="text" class="form-control" id="inputAnswer">
+        <input type="text" class="form-control text-center" id="inputAnswer">
     </div>
 </footer>
 
