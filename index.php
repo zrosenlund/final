@@ -18,13 +18,16 @@ session_start();
 //Create an instance of the Base class
 $f3 = Base::instance();
 
+//****************************************************** ROUTES *************************
 //Define a default route
 $f3->route('GET /', function() {
-    $template = new Template();
-    echo $template->render('pages/home.html');
+
+    echo Template::instance()->render("pages/home.html");
 }
 );
 
+
+//****************************************************** SIGN UP *************************
 $f3->route('POST /signup', function($f3) {
     $_SESSION['username'] = $_POST['createUsername'];
     $_SESSION['password'] = $_POST['createPassword1'];
@@ -58,9 +61,16 @@ $f3->route('POST /signup', function($f3) {
     //Execute
     $statement->execute();
 
-    $template = new Template();
-    echo $template->render('pages/signup.html');
+    echo Template::instance()->render("pages/signup.html");
+
+
+
 }
+
+//****************************************************** LEVEL 1  *************************
+
+
+
 );
 
 //Run fat free
