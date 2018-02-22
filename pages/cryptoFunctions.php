@@ -7,9 +7,13 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-
+//testing functions
 $results = lettersShift("A B C D", 2);
-echo "$results";
+$results2 = lettersToNumbers("A B C D E F");
+$results3 = numbersToLetters("1 2 3 4 5");
+$results4 = binaryToLetters("01000001 01000010 01000011");
+
+echo "$results $results2 $results3 $results4";
 
 //function that converts numbers to letters
 function numbersToLetters($string)
@@ -95,6 +99,7 @@ function binaryToLetters($string)
     return $result;
 }
 
+//this doesn't work yet
 function lettersShift($string, $number)
 {
     $lettersArray = array(1 => "A", 2 => "B", 3 => "C", 4 => "D", 5 => "E", 6 => "F",
@@ -115,7 +120,7 @@ function lettersShift($string, $number)
     {
         $num = array_search($letter , $lettersArray);
         $num = $num + $number;
-        $shiftLetter .= lettersArray[$num];
+        $shiftLetter .= $lettersArray[$num];
     }
     return $shiftLetter;
 
