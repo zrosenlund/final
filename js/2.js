@@ -13,10 +13,10 @@ $(document).ready(function(){
         var answer = $('#inputAnswer').val();
         answer = answer.toLowerCase();
 
-        if (answer === 'enigma')
+        if (answer === '34343')
         {
             $('#puzzle').fadeOut("slow");
-            window.location.replace("2.php").delay("slow");
+            window.location.replace("3.php").delay("slow");
         }
     })
 });

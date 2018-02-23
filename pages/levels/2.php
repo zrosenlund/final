@@ -34,8 +34,8 @@ error_reporting(E_ALL);
 
     <?php require('../toolBar.php');?>
 
-    <div class="w-100 mx-auto d-flex justify-content-center align-items-center p-10" id="main">
-        <img src="https://www.researchgate.net/profile/Thomas_Fischer3/publication/273320579/figure/fig3/AS:351390573580289@1460789449730/Schematic-diagram-of-Enigma-machine-from-Scheribus-1928.ppm" alt="enigma" id="picture">
+    <div class="w-100 d-flex justify-content-center align-items-center p-10" id="main">
+        <img src="https://www.researchgate.net/profile/Thomas_Fischer3/publication/273320579/figure/fig3/AS:351390573580289@1460789449730/Schematic-diagram-of-Enigma-machine-from-Scheribus-1928.ppm" alt="enigma" id="titleScreen">
     </div>
 
 </div>
@@ -48,6 +48,6 @@ error_reporting(E_ALL);
 
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="../../js/1.js"></script>
+<script src="../../js/2.js"></script>
 </body>
 </html>

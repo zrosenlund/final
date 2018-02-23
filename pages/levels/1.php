@@ -34,7 +34,7 @@ error_reporting(E_ALL);
 
     <?php require('../toolBar.php');?>
 
-    <div class="w-100 mx-auto d-flex justify-content-center align-items-center p-10" id="main">
+    <div class="w-100 d-flex justify-content-center align-items-center p-10" id="main">
         <div class="flex-column mx-auto text-center" id="titleScreen">
             <h1 class="display-2">Use the Tools Given to You</h1>
             <br>
