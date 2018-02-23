@@ -35,14 +35,7 @@ error_reporting(E_ALL);
     <?php require('../toolBar.php');?>
 
     <div class="w-100 mx-auto d-flex justify-content-center align-items-center p-10" id="main">
-        <div class="flex-column mx-auto text-center" id="titleScreen">
-            <h1 class="display-2">Use the Tools Given to You</h1>
-            <br>
-            <h1 class="display-2">To Discover the Truth</h1>
-        </div>
-        <div class="mx-auto text-center" id="puzzle">
-            <h2 class="display-2">5-14-9-7-13-1</h2>
-        </div>
+        <img src="https://www.researchgate.net/profile/Thomas_Fischer3/publication/273320579/figure/fig3/AS:351390573580289@1460789449730/Schematic-diagram-of-Enigma-machine-from-Scheribus-1928.ppm" alt="enigma" id="picture">
     </div>
 
 </div>

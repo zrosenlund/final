@@ -12,6 +12,7 @@ $(document).ready(function(){
     $('#inputAnswer').on('keyup', function() {
         if ($('#inputAnswer').val() == 'enigma')
         {
+            $('#puzzle').delay("slow").fadeOut("slow");
             window.location.replace("2.php");
         }
     })
