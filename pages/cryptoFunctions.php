@@ -10,7 +10,7 @@ ini_set("display_errors", 1);
 //testing functions
 $results = lettersShift("A B C D", 2);
 $results2 = lettersToNumbers("A B C D E F");
-$results3 = numbersToLetters("1 2 3 4 5");
+$results3 = numbersToLetters("5 14  4 5");
 $results4 = binaryToLetters("01000001 01000010 01000011");
 
 echo "$results $results2 $results3 $results4";
