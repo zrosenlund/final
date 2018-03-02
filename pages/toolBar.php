@@ -10,141 +10,120 @@ ini_set("display_errors", 1);
 error_reporting(E_ALL);
 
 include ("cryptoFunctions.php");
+
+echo'<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>';
+
+echo"<script>";
+echo" //hide text inputs and submit boxes
+      \$(\".decode\").hide();
+      \$(\".submit\").hide();\ "; /*close echo*/
+
+    //show text input and submit boxes when <a> is clicked
+
+    //show text input and hide the rest
+/*open echo*/
+  echo"  \$(\"#link1\").click(function(){
+        \$(\"#decode1\").toggle();
+        \$(\"#decode2\").hide();
+        \$(\"#submit2\").hide();
+        \$(\"#decode3\").hide();
+        \$(\"#submit3\").hide();
+        \$(\"#decode4\").hide();
+        \$(\"#submit4\").hide();
+    });";                       /*close echo*/
+
+    //show button when first input box is clicked
+    echo" \$(\"#decode1\").click(function(){
+        \$(\"#submit1\").show();
+    });";/*close echo*/
+
+/*open echo*/
+    echo'
+ 
+    //when submitted, call JSON file for that input **NOT WORKING YET**
+    $("#submit1").click(function(){
+        var input = $("#decode1").val();
+        doneInput = lettersToNumbers(input)";, function(result) {';
+        echo"<p>doneInput</p>;";
+
+
+
+
+
+ /*close echo*/
+
+/*open echo*/
+    echo"
+    // text input when submit button is hit
+    \$(\"#submit1\").on(\"click\", function() {
+        var choice = \$(\"#decode1\").val();
+        \$(\"#result1\").html(choice);
+    })
+    //TOOL 2
+    //text input
+    \$(\"#link2\").click(function(){
+        \$(\"#decode2\").toggle();
+        \$(\"#decode1\").hide();
+        \$(\"#submit1\").hide();
+        \$(\"#decode3\").hide();
+        \$(\"#submit3\").hide();
+        \$(\"#decode4\").hide();
+        \$(\"#submit4\").hide();
+    });
+
+    //button
+    \$(\"#decode2\").click(function(){
+        \$(\"#submit2\").show();
+    });
+
+    //TOOL 3
+    //text input
+    \$(\"#link3\").click(function(){
+        \$(\"#decode3\").toggle();
+        \$(\"#decode1\").hide();
+        \$(\"#submit1\").hide();
+        \$(\"#decode2\").hide();
+        \$(\"#submit2\").hide();
+        \$(\"#decode4\").hide();
+        \$(\"#submit4\").hide();
+    });
+
+    //button
+    \$(\"#decode3\").click(function(){
+        \$(\"#submit3\").show();
+    });
+
+    //TOOL 4
+    //text input
+    \$(\"#link4\").click(function(){
+        \$(\"#decode4\").toggle();
+        \$(\"#decode1\").hide();
+        \$(\"#submit1\").hide();
+        \$(\"#decode2\").hide();
+        \$(\"#submit2\").hide();
+        \$(\"#decode3\").hide();
+        \$(\"#submit3\").hide();
+    });
+
+    //button
+    \$(\"#decode4\").click(function(){
+        \$(\"#submit4\").show();
+    });
+
+\";
+
+
+
+
+";
+
+
 ?>
 
-<div id="mySidenav" class="sidenav">
-    <!--    letters to numbers (1)-->
-    <a href="#" id="link1" class="tools">A -> #</a>
-    <input class="decode" id="decode1" type="text">
-    <button class="submit" id="submit1"> <-- </button>
-<<<<<<< HEAD
-        <p id="results1"> </p>
-=======
-    <p id="result1"></p>
->>>>>>> b99201e0ce31ec5301f4794f5cdcb376f0107d94
-
-    <!--    numbers to letters (2) -->
-    <a href="#" id="link2" class="tools"># -> A</a>
-    <input class="decode" id="decode2" type="text">
-    <button class="submit" id="submit2"> <-- </button>
-    <p id="result2"></p>
-
-    <!--    letter shift (3) -->
-    <a href="#" id="link3" class="tools">A >> D</a>
-    <input class="decode" id="decode3" type="text">
-    <button class="submit" id="submit3"> <-- </button>
-    <p id="result3"></p>
-
-    <!--    binary to letters (4)-->
-    <a href="#" id="link4" class="tools">01101101</a>
-        <input class="decode" id="decode4" type="text">
-    <button class="submit" id="submit4"> <-- </button>
-    <p id="result4"></p>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 <script>
     // another note to self: Use the keypress action to make submit button to show
 
-    //hide text inputs and submit boxes
-    $(".decode").hide();
-    $(".submit").hide();
 
-    //show text input and submit boxes when <a> is clicked
-
-    //TOOL 1
-        //show text input and hide the rest
-        $("#link1").click(function(){
-            $("#decode1").toggle();
-            $("#decode2").hide();
-            $("#submit2").hide();
-            $("#decode3").hide();
-            $("#submit3").hide();
-            $("#decode4").hide();
-            $("#submit4").hide();
-        });
-
-        // //show button
-        // $("#decode1").click(function(){
-        //     $("#submit1").show();
-        // });
-
-        //
-        $("#submit1").click(function(){
-            var input = $("#decode1").val();
-
-            $.getJSON("cryptoFunctions.json", function(result) {
-                $.each(result, function (index, alphaNumeric) {
-                    var alphaNumericSelection = cryptoFunction.alphaNumeric.input;
-                    if (input == alphaNumericSelection) {
-                        $("#results1").html(cryptoFunction.alphaNumeric.input);
-                    }
-                });
-            });
-
-        });
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> b99201e0ce31ec5301f4794f5cdcb376f0107d94
-        //NOTE TO SELF- left off with calling PHP crypto function on
-        // text input when submit button is hit
-        $("#submit1").on("click", function() {
-            var choice = $("#decode1").val();
-            $("#result1").html(choice);
-        })
-    //TOOL 2
-        //text input
-        $("#link2").click(function(){
-            $("#decode2").toggle();
-            $("#decode1").hide();
-            $("#submit1").hide();
-            $("#decode3").hide();
-            $("#submit3").hide();
-            $("#decode4").hide();
-            $("#submit4").hide();
-        });
-
-        //button
-        $("#decode2").click(function(){
-            $("#submit2").show();
-        });
-
-    //TOOL 3
-        //text input
-        $("#link3").click(function(){
-            $("#decode3").toggle();
-            $("#decode1").hide();
-            $("#submit1").hide();
-            $("#decode2").hide();
-            $("#submit2").hide();
-            $("#decode4").hide();
-            $("#submit4").hide();
-        });
-
-        //button
-        $("#decode3").click(function(){
-            $("#submit3").show();
-        });
-
-    //TOOL 4
-        //text input
-        $("#link4").click(function(){
-            $("#decode4").toggle();
-            $("#decode1").hide();
-            $("#submit1").hide();
-            $("#decode2").hide();
-            $("#submit2").hide();
-            $("#decode3").hide();
-            $("#submit3").hide();
-        });
-
-        //button
-        $("#decode4").click(function(){
-            $("#submit4").show();
-        });
 
 </script>
