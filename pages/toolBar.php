@@ -16,6 +16,7 @@ error_reporting(E_ALL);
     <a href="#" id="link1" class="tools">A -> #</a>
     <input class="decode" id="decode1" type="text">
     <button class="submit" id="submit1"> <-- </button>
+        <p id="results1"> </p>
 
     <!--    numbers to letters (2) -->
     <a href="#" id="link2" class="tools"># -> A</a>
@@ -37,6 +38,8 @@ error_reporting(E_ALL);
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 <script>
+    // another note to self: Use the keypress action to make submit button to show
+
     //hide text inputs and submit boxes
     $(".decode").hide();
     $(".submit").hide();
@@ -55,10 +58,26 @@ error_reporting(E_ALL);
             $("#submit4").hide();
         });
 
-        //show button
-        $("#decode1").click(function(){
-            $("#submit1").show();
+        // //show button
+        // $("#decode1").click(function(){
+        //     $("#submit1").show();
+        // });
+
+        //
+        $("#submit1").click(function(){
+            var input = $("#decode1").val();
+
+            $.getJSON("cryptoFunctions.json", function(result) {
+                $.each(result, function (index, alphaNumeric) {
+                    var alphaNumericSelection = cryptoFunction.alphaNumeric.input;
+                    if (input == alphaNumericSelection) {
+                        $("#results1").html(cryptoFunction.alphaNumeric.input);
+                    }
+                });
+            });
+
         });
+
 
 
         //NOTE TO SELF- left off with calling PHP crypto function on
