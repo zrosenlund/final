@@ -8,31 +8,38 @@
 
 ini_set("display_errors", 1);
 error_reporting(E_ALL);
+
+include ("cryptoFunctions.php");
 ?>
 
 <div id="mySidenav" class="sidenav">
-    <form method="POST">
     <!--    letters to numbers (1)-->
     <a href="#" id="link1" class="tools">A -> #</a>
     <input class="decode" id="decode1" type="text">
     <button class="submit" id="submit1"> <-- </button>
+<<<<<<< HEAD
         <p id="results1"> </p>
+=======
+    <p id="result1"></p>
+>>>>>>> b99201e0ce31ec5301f4794f5cdcb376f0107d94
 
     <!--    numbers to letters (2) -->
     <a href="#" id="link2" class="tools"># -> A</a>
     <input class="decode" id="decode2" type="text">
     <button class="submit" id="submit2"> <-- </button>
+    <p id="result2"></p>
 
     <!--    letter shift (3) -->
     <a href="#" id="link3" class="tools">A >> D</a>
     <input class="decode" id="decode3" type="text">
     <button class="submit" id="submit3"> <-- </button>
+    <p id="result3"></p>
 
     <!--    binary to letters (4)-->
     <a href="#" id="link4" class="tools">01101101</a>
         <input class="decode" id="decode4" type="text">
     <button class="submit" id="submit4"> <-- </button>
-    </form>
+    <p id="result4"></p>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -49,7 +56,7 @@ error_reporting(E_ALL);
     //TOOL 1
         //show text input and hide the rest
         $("#link1").click(function(){
-            $("#decode1").show();
+            $("#decode1").toggle();
             $("#decode2").hide();
             $("#submit2").hide();
             $("#decode3").hide();
@@ -78,15 +85,21 @@ error_reporting(E_ALL);
 
         });
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b99201e0ce31ec5301f4794f5cdcb376f0107d94
         //NOTE TO SELF- left off with calling PHP crypto function on
         // text input when submit button is hit
-
+        $("#submit1").on("click", function() {
+            var choice = $("#decode1").val();
+            $("#result1").html(choice);
+        })
     //TOOL 2
         //text input
         $("#link2").click(function(){
-            $("#decode2").show();
+            $("#decode2").toggle();
             $("#decode1").hide();
             $("#submit1").hide();
             $("#decode3").hide();
@@ -103,7 +116,7 @@ error_reporting(E_ALL);
     //TOOL 3
         //text input
         $("#link3").click(function(){
-            $("#decode3").show();
+            $("#decode3").toggle();
             $("#decode1").hide();
             $("#submit1").hide();
             $("#decode2").hide();
@@ -120,7 +133,7 @@ error_reporting(E_ALL);
     //TOOL 4
         //text input
         $("#link4").click(function(){
-            $("#decode4").show();
+            $("#decode4").toggle();
             $("#decode1").hide();
             $("#submit1").hide();
             $("#decode2").hide();

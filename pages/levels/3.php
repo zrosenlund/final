@@ -34,8 +34,12 @@ error_reporting(E_ALL);
 
     <?php require('../toolBar.php');?>
 
-    <div class="w-100 d-flex justify-content-center align-items-center p-10" id="main">
-        <h2 class="display-2">98-105-110-97-114-1</h2>
+    <div class="w-100 d-flex flex-column justify-content-center align-items-center p-10" id="main">
+        <h2 class="display-4">01010010</h2>
+        <h2 class="display-4">01001111</h2>
+        <h2 class="display-4">01010101</h2>
+        <h2 class="display-4">01010100</h2>
+        <h2 class="display-4">01000101</h2>
     </div>
 
 </div>
@@ -48,6 +52,6 @@ error_reporting(E_ALL);
 
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="../../js/2.js"></script>
+<script src="../../js/3.js"></script>
 </body>
 </html>

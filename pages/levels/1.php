@@ -41,7 +41,7 @@ error_reporting(E_ALL);
             <h1 class="display-2">To Discover the Truth</h1>
         </div>
         <div class="mx-auto text-center" id="puzzle">
-            <h2 class="display-2">5-14-9-7-13-1</h2>
+            <h2 class="display-2">ENIGMA</h2>
         </div>
     </div>
 
