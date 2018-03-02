@@ -32,7 +32,9 @@ error_reporting(E_ALL);
 
 <div class="d-flex flex-row h-100" id="body">
 
+    <!-- REQUIRE TOOLBAR -->
     <?php require('../toolBar.php');?>
+    <p>Cheching at 1.php after toolbar require</p>
 
     <div class="w-100 d-flex justify-content-center align-items-center p-10" id="main">
         <div class="flex-column mx-auto text-center" id="titleScreen">
@@ -41,7 +43,7 @@ error_reporting(E_ALL);
             <h1 class="display-2">To Discover the Truth</h1>
         </div>
         <div class="mx-auto text-center" id="puzzle">
-            <h2 class="display-2">ENIGMA</h2>
+            <h2 class="display-2">5-14-9-7-13-1</h2>
         </div>
     </div>
 

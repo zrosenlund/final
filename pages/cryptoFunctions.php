@@ -18,6 +18,15 @@ ini_set("display_errors", 1);
 //function that converts numbers to letters
 function numbersToLetters($string)
 {
+
+    //remove HTML tags and ASCII values > 127
+    $strippedString = filter_var($string, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+
+    if(!ctype_alpha($strippedString))
+    {
+        return "Try again";
+    }
+    echo"inside loop";
     //associative array to use as key
     $alpha = array( "A"=>"1", "B"=>"2" , "C"=>"3" , "D"=>"4" , "E"=>"5" ,
         "F"=>"6" , "G"=>"7" , "H" => "8",  "I"=>"9" , "J"=>"10" ,
@@ -30,7 +39,7 @@ function numbersToLetters($string)
 
 
     //turn string into an array
-    $numbers = explode(" ", $string, 30);
+    $numbers = explode(" ", $strippedString, 30);
 
     //loop through letters array searching through alpha array and put result into variable
     foreach($numbers as $number)
