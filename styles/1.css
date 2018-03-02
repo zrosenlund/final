@@ -25,7 +25,8 @@ body {
 }
 
 #inputAnswer {
-    margin-left: 55px;
+    width: 300px;
+    margin-left: 260px;
 }
 
 #main {

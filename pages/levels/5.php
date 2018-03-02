@@ -35,7 +35,7 @@ error_reporting(E_ALL);
     <?php require('../toolBar.php');?>
 
     <div class="w-100 d-flex justify-content-center align-items-center p-10" id="main">
-        <h2 class="display-2">98-105-110-97-114-1</h2>
+        <h2 class="display-2">Congratulations, You Won!</h2>
     </div>
 
 </div>
