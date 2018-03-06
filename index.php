@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
 //Require the autoload file
 require_once('vendor/autoload.php');
-require("/home/zrosenlu/config.php");
+require("/home/selkhart/config.php");
 
 session_start();
 
@@ -25,7 +25,6 @@ $f3->route('GET /', function() {
     echo Template::instance()->render("pages/home.html");
 }
 );
-
 
 //****************************************************** SIGN UP *************************
 $f3->route('POST /signup', function($f3) {
@@ -65,7 +64,103 @@ $f3->route('POST /signup', function($f3) {
 
 
 
-}
+});
+
+
+//*******************************************************LEVELS **************************
+    //Define a default route
+$f3->route('POST /levels/@pageName', function ($f3, $params) {
+
+    switch ($params['pageName']) {
+
+//MENU
+        case 'menu.php' :
+
+            //POST
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+                    echo Template::instance()->render('/levels/menu.php');
+            }
+
+            break;
+
+//LEVEL 1
+        case '1.php' :
+
+            //POST
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                if (isset($_POST['submit'])) {
+
+                    echo Template::instance()->render('/levels/1.php');
+
+                } else {
+
+                    $f3->reroute('./levels/1.php');
+                }
+
+            }
+            break;
+//LEVEL 2
+        case '2.php':
+
+            //POST
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                if (isset($_POST['submit'])) {
+
+                    echo Template::instance()->render('/levels/2.php');
+
+                }
+            }
+
+            break;
+
+//LEVEL 3
+        case '3.php':
+
+            //POST
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+                if (isset($_POST['submit'])) {
+
+                    echo Template::instance()->render('pages/levels/3.php');
+
+                }
+            }
+            break;
+
+//LEVEL 4
+        case '4.php':
+
+            //POST
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                if (isset($_POST['submit'])) {
+
+                    echo Template::instance()->render('pages/levels/4.php');
+
+                }
+            }
+            break;
+
+ //LEVEL 5
+        case '3.php':
+
+            //POST
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+                if (isset($_POST['submit'])) {
+
+                    echo Template::instance()->render('pages/levels/5.php');
+
+                }
+            }
+            break;
+
+
+
+        default:
+            $f3->error(404);
+    }}
+
 
 //****************************************************** LEVEL 1  *************************
 
