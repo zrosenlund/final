@@ -35,7 +35,7 @@ error_reporting(E_ALL);
     <?php require('../toolBar.php');?>
 
     <div class="w-100 d-flex justify-content-center align-items-center p-10" id="main">
-        <h2 class="display-2">98-105-110-97-114-1</h2>
+        <img src="https://www.researchgate.net/profile/Thomas_Fischer3/publication/273320579/figure/fig3/AS:351390573580289@1460789449730/Schematic-diagram-of-Enigma-machine-from-Scheribus-1928.ppm" alt="enigma" id="titleScreen">
     </div>
 
 </div>

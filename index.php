@@ -20,14 +20,14 @@ $f3 = Base::instance();
 
 //****************************************************** ROUTES *************************
 //Define a default route
-$f3->route('GET /', function() {
+$f3->route('GET /', function () {
 
     echo Template::instance()->render("pages/home.html");
 }
 );
 
 //****************************************************** SIGN UP *************************
-$f3->route('POST /signup', function($f3) {
+$f3->route('POST /signup', function ($f3) {
     $_SESSION['username'] = $_POST['createUsername'];
     $_SESSION['password'] = $_POST['createPassword1'];
     $f3->set('username', $_POST['createUsername']);
@@ -36,8 +36,7 @@ $f3->route('POST /signup', function($f3) {
     try {
         //Instantiate a database object
         $dbh = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
-    }
-    catch(PDOException $e) {
+    } catch (PDOException $e) {
         echo $e->getMessage();
         return;
     }
@@ -62,109 +61,57 @@ $f3->route('POST /signup', function($f3) {
 
     echo Template::instance()->render("pages/signup.html");
 
-
-
 });
 
 
 //*******************************************************LEVELS **************************
-    //Define a default route
-$f3->route('POST /levels/@pageName', function ($f3, $params) {
+
+
+//Define a default route
+$f3->route('GET /levels/@pageName', function ($f3, $params) {
 
     switch ($params['pageName']) {
 
 //MENU
-        case 'menu.php' :
+        case 'menu' :
 
-            //POST
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-                    echo Template::instance()->render('/levels/menu.php');
-            }
-
+            //set route
+            echo Template::instance()->render('/levels/menu.php');
             break;
 
 //LEVEL 1
-        case '1.php' :
+        case '1' :
 
-            //POST
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                if (isset($_POST['submit'])) {
-
-                    echo Template::instance()->render('/levels/1.php');
-
-                } else {
-
-                    $f3->reroute('./levels/1.php');
-                }
-
-            }
+            echo Template::instance()->render('/levels/1.php');
             break;
 //LEVEL 2
-        case '2.php':
+        case '2':
 
-            //POST
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                if (isset($_POST['submit'])) {
-
-                    echo Template::instance()->render('/levels/2.php');
-
-                }
-            }
+            echo Template::instance()->render('/levels/2.php');
 
             break;
 
 //LEVEL 3
-        case '3.php':
-
-            //POST
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-                if (isset($_POST['submit'])) {
-
-                    echo Template::instance()->render('pages/levels/3.php');
-
-                }
-            }
+        case '3':
+            echo Template::instance()->render('pages/levels/3.php');
             break;
-
 //LEVEL 4
-        case '4.php':
+        case '4':
 
-            //POST
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                if (isset($_POST['submit'])) {
-
-                    echo Template::instance()->render('pages/levels/4.php');
-
-                }
-            }
+            echo Template::instance()->render('pages/levels/4.php');
             break;
 
- //LEVEL 5
-        case '3.php':
-
-            //POST
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-                if (isset($_POST['submit'])) {
-
-                    echo Template::instance()->render('pages/levels/5.php');
-
-                }
-            }
+        //LEVEL 5
+        case '5':
+            echo Template::instance()->render('pages/levels/5.php');
             break;
-
-
 
         default:
             $f3->error(404);
-    }}
+    }
+}
 
-
-//****************************************************** LEVEL 1  *************************
-
-
+//****************************************************** CLOSE LEVELS  *************************
 
 );
 
