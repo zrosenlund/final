@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
 //Require the autoload file
 require_once('vendor/autoload.php');
-require("/home/selkhart/config.php");
+require("/home/zrosenlu/config.php");
 
 session_start();
 
@@ -76,18 +76,18 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
         case 'menu' :
 
             //set route
-            echo Template::instance()->render('/levels/menu.php');
+            echo Template::instance()->render('pages/levels/menu.php');
             break;
 
 //LEVEL 1
         case '1' :
 
-            echo Template::instance()->render('/levels/1.php');
+            echo Template::instance()->render('pages/levels/1.php');
             break;
 //LEVEL 2
         case '2':
 
-            echo Template::instance()->render('/levels/2.php');
+            echo Template::instance()->render('pages/levels/2.php');
 
             break;
 
