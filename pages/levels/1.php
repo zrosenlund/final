@@ -34,7 +34,6 @@ error_reporting(E_ALL);
 
     <!-- REQUIRE TOOLBAR -->
     <?php require('../toolBar.php');?>
-    <p>Cheching at 1.php after toolbar require</p>
 
     <div class="w-100 d-flex justify-content-center align-items-center p-10" id="main">
         <div class="flex-column mx-auto text-center" id="titleScreen">
