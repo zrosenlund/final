@@ -13,7 +13,7 @@ $(document).ready(function(){
         var answer = $('#inputAnswer').val();
         answer = answer.toLowerCase();
 
-        if (answer === 'enigma')
+        if (answer === 'binary')
         {
             $('#puzzle').fadeOut("slow");
             window.location.replace("3.php").delay("slow");

@@ -15,5 +15,5 @@ $(document).ready(function(){
             $('#puzzle').fadeOut("slow");
             window.location.replace("2.php").delay("slow");
         }
-    })
+    });
 });

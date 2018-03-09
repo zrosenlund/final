@@ -24,7 +24,7 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="../../styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles/1.css">
+    <link rel="stylesheet" href="../../styles/level.css">
     <link rel="stylesheet" href="../../styles/sideBar.css">
     <title>The Enigma Principle</title>
 </head>
@@ -35,11 +35,11 @@ error_reporting(E_ALL);
     <?php require('../toolBar.php');?>
 
     <div class="w-100 d-flex flex-column justify-content-center align-items-center p-10" id="main">
-        <h2 class="display-4">01010010</h2>
-        <h2 class="display-4">01001111</h2>
-        <h2 class="display-4">01010101</h2>
-        <h2 class="display-4">01010100</h2>
-        <h2 class="display-4">01000101</h2>
+        <h2 class="display-4">00010010</h2>
+        <h2 class="display-4">00001111</h2>
+        <h2 class="display-4">00010101</h2>
+        <h2 class="display-4">00010101</h2>
+        <h2 class="display-4">00000101</h2>
     </div>
 
 </div>

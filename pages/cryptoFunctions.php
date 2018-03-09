@@ -1,7 +1,3 @@
-<!--Sarah Elkhart
-    29 Jan 2018
-    cryptoFunctions.php-->
-
 <?php
 
 error_reporting(E_ALL);
