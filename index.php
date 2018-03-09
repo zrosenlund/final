@@ -63,9 +63,15 @@ $f3->route('POST /signup', function ($f3) {
 
 });
 
+//****************************************************** MENU ***************************
 
-//*******************************************************LEVELS **************************
+//$f3->route('GET /pages/menu', function ($f3) {
+//
+//    echo Template::instance()->render("pages/menu.html");
+//
+//});
 
+//****************************************************** *LEVELS *************************
 
 //Define a default route
 $f3->route('GET /levels/@pageName', function ($f3, $params) {
@@ -75,19 +81,18 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 //MENU
         case 'menu' :
 
-            //set route
-            echo Template::instance()->render('/levels/menu.php');
+            echo Template::instance()->render('pages/levels/menu.php');
             break;
 
 //LEVEL 1
         case '1' :
 
-            echo Template::instance()->render('/levels/1.php');
+            echo Template::instance()->render('pages/levels/1.php');
             break;
 //LEVEL 2
         case '2':
 
-            echo Template::instance()->render('/levels/2.php');
+            echo Template::instance()->render('pages/levels/2.php');
 
             break;
 
@@ -109,11 +114,11 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
         default:
             $f3->error(404);
     }
-}
+});
 
 //****************************************************** CLOSE LEVELS  *************************
 
-);
+
 
 //Run fat free
 $f3->run();

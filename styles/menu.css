@@ -1,0 +1,25 @@
+body
+{
+    background-color: black;
+}
+
+#menu
+{
+    width: 350px;
+}
+
+#menuContainer
+{
+    border: 5px solid black;
+}
+
+#menuBox
+{
+    background-color: lightgray;
+}
+
+.myIcons
+{
+    width: 150px;
+}
+
