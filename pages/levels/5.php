@@ -24,7 +24,7 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="../../styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles/1.css">
+    <link rel="stylesheet" href="../../styles/level.css">
     <link rel="stylesheet" href="../../styles/sideBar.css">
     <title>The Enigma Principle</title>
 </head>
