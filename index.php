@@ -65,11 +65,20 @@ $f3->route('POST /signup', function ($f3) {
 
 //****************************************************** MENU ***************************
 
-//$f3->route('GET /pages/menu', function ($f3) {
-//
-//    echo Template::instance()->render("pages/menu.html");
-//
-//});
+$f3->route('GET /pages/menu', function ($f3) {
+
+    $f3->set("level", player.getLevel());
+
+
+    function checkLevel(){
+
+    }
+
+
+
+    echo Template::instance()->render("pages/menu.html");
+
+});
 
 //****************************************************** *LEVELS *************************
 
