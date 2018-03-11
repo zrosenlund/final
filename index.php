@@ -66,13 +66,14 @@ $f3->route('POST /signup', function ($f3) {
 //****************************************************** MENU ***************************
 
 $f3->route('GET /pages/menu', function ($f3) {
+    $f3->set("level", 5);
 
-    $f3->set("level", player.getLevel());
+//    $f3->set("level", player.getLevel());
 
-
-    function checkLevel(){
-
-    }
+//
+//    function checkLevel(){
+//
+//    }
 
 
 

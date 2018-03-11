@@ -25,37 +25,45 @@
     <!-- OPEN MENU CONTAINER-->
     <div class="container text-center w-50 mx-auto" id="menuContainer">
 
-        <!-- MENU ROW 1-->
+    <!-- MENU ROW 1-->
         <div class="text-center w-100 mx-auto">
             <!-- level 1-->
             <a href="../pages/levels/1.php" ><img src="../images/levelIcons/1visited.png" id="levelOneIconVisited" alt="Level one icon" class="myIcons"></a>
 
-            <!-- Levels 2 check -->
-            <check if="{{@level >=2 }}">
+        <!-- Levels 2 check -->
+            <check if="{{ @level >= 2 }}">
                 <true><a href="../pages/levels/2.php"><img src="../images/levelIcons/2visited.png" id="levelTwoIconVisited" alt="Level two icon" class="myIcons"></a> </true>
 
-                <false><img src="../images/levelIcons/2unvisited.png" id="levelTwoIconUnvisited" alt="Level two icon" class="myIcons"></a> </false>
+                <false><img src="../images/levelIcons/2unvisited.png" id="levelTwoIconUnvisited" alt="Level two icon" class="myIcons"></false>
             </check>
 
-            <!-- Levels 3 check -->
-            <check if="{{@level >=3 }}">
+         <!-- Levels 3 check -->
+            <check if="{{@level >= 3 }}">
                 <true><a href="../pages/levels/3.php"><img src="../images/levelIcons/3visited.png" id="levelThreeIconVisited" alt="Level three icon" class="myIcons"></a> </true>
 
-                <false><img src="../images/levelIcons/3unvisited.png" id="levelThreeIconUnvisited" alt="Level three icon" class="myIcons"></a></false>
+                <false><img src="../images/levelIcons/3unvisited.png" id="levelThreeIconUnvisited" alt="Level three icon" class="myIcons"></false>
             </check>
         </div> <!-- close row 1-->
 
         <!-- MENU ROW 2-->
         <div class="justify-items-center w-100 mx-auto">
             <!-- level 4-->
-            <check if="{{@level >=4 }}">
+            <check if="{{@level >= 4 }}">
                 <true><a href="../pages/levels/4.php" ><img src="../images/levelIcons/4visited.png" id="levelFourIconVisited" alt="Level four icon" class=" myIcons"></a></true>
+
                 <false><img src="../images/levelIcons/4unvisited.png" id="levelFourIconUnvisited" alt="Level four icon" class=" myIcons"></false>
             </check>
+
             <!-- level 5-->
-            <check if="{{@level >=5 }}">
-                <true><a href="../pages/levels/5.php" ><img src="../images/levelIcons/5Visited.png" id="levelFiveIconVisited" alt="Level five icon" class=" myIcons"></a></true>
+            <check if="{{@level >= 5 }}">
+                <true><a href="../pages/levels/5.php" ><img src="../images/levelIcons/5visited.png" id="levelFiveIconVisited" alt="Level five icon" class=" myIcons"></a></true>
                 <false><img src="../images/levelIcons/5unvisited.png" id="levelFiveIconUnvisited" alt="Level five icon" class=" myIcons"></false>
+            </check>
+
+            <!--level 6-->
+            <check if="{{@level >= }}">
+                <true></true>
+                <false></false>
             </check>
 
             <a href="" ><img src="../images/levelIcons/6unvisited.png" id="levelSixIconUnvisited" alt="Level six icon" class=" myIcons"></a>
@@ -63,8 +71,24 @@
 
         <!-- MENU ROW 3-->
         <div class=" text-center w-100 mx-auto">
-            <img src="../images/levelIcons/7unvisited.png" id="leveSevenIconUnvisited" alt="Level seven icon" class=" myIcons">
+            <!-- level 7-->
+            <check if="{{@level >= 7}}">
+                <true><a href="../pages/levels/7.php"><img src="../images/levelIcons/7visited.png" id="leveSevenIconVisited" alt="Level seven icon" class=" myIcons"></a></true>
+                <false><img src="../images/levelIcons/7unvisited.png" id="leveSevenIconUnvisited" alt="Level seven icon" class=" myIcons"></false>
+            </check>
+
+            <!-- level 8 -->
+            <check if="{{@level >= }}">
+                <true></true>
+                <false></false>
+            </check>
             <img src="../images/levelIcons/8unvisited.png" id="levelEightIconUnvisited" alt="Level eight icon" class=" myIcons">
+
+            <!-- level 9-->
+            <check if="{{@level >= }}">
+                <true></true>
+                <false></false>
+            </check>
             <img src="../images/levelIcons/9unvisited.png" id="levelNineIconUnvisited" alt="Level nine icon" class=" myIcons">
         </div> <!-- close row 3-->
 
