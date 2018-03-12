@@ -50,7 +50,6 @@
             <!-- level 4-->
             <check if="{{@level >= 4 }}">
                 <true><a href="../pages/levels/4.php" ><img src="../images/levelIcons/4visited.png" id="levelFourIconVisited" alt="Level four icon" class=" myIcons"></a></true>
-
                 <false><img src="../images/levelIcons/4unvisited.png" id="levelFourIconUnvisited" alt="Level four icon" class=" myIcons"></false>
             </check>
 
@@ -62,11 +61,11 @@
 
             <!--level 6-->
             <check if="{{@level >= }}">
-                <true></true>
-                <false></false>
+                <true> <a href="../pages/levels/6.php" ><img src="../images/levelIcons/6unvisited.png" id="levelSixIconVisited" alt="Level six icon" class=" myIcons"></a></true>
+                <false><img src="../images/levelIcons/6visited.png" id="levelSixIconVvisited" alt="Level six icon" class=" myIcons"></false>
             </check>
 
-            <a href="" ><img src="../images/levelIcons/6unvisited.png" id="levelSixIconUnvisited" alt="Level six icon" class=" myIcons"></a>
+
         </div> <!-- close row 2-->
 
         <!-- MENU ROW 3-->
@@ -78,23 +77,24 @@
             </check>
 
             <!-- level 8 -->
-            <check if="{{@level >= }}">
-                <true></true>
-                <false></false>
+            <check if="{{@level >= 8}}">
+                <true><a href="../pages/levels/8.php"> <img src="../images/levelIcons/8visited.png" id="levelEightIconVisited" alt="Level eight icon" class=" myIcons"></a></true>
+                <false><img src="../images/levelIcons/8unvisited.png" id="levelEightIconUnvisited" alt="Level eight icon" class=" myIcons"></false>
             </check>
-            <img src="../images/levelIcons/8unvisited.png" id="levelEightIconUnvisited" alt="Level eight icon" class=" myIcons">
 
             <!-- level 9-->
-            <check if="{{@level >= }}">
-                <true></true>
-                <false></false>
+            <check if="{{@level >= 9}}">
+                <true><a href="../pages/levels/9.php"> <img src="../images/levelIcons/9visited.png" id="levelNightIconVisited" alt="Level nine icon" class=" myIcons"></a></true>
+                <false><img src="../images/levelIcons/9visited.png" id="levelNineIconUnvisited" alt="Level nine icon" class=" myIcons"></false>
             </check>
-            <img src="../images/levelIcons/9unvisited.png" id="levelNineIconUnvisited" alt="Level nine icon" class=" myIcons">
         </div> <!-- close row 3-->
 
         <!-- MENU ROW 4-->
         <div class=" text-center w-100 mx-auto">
-            <img src="../images/levelIcons/10unvisited.png" id="leveTenIconUnvisited" alt="Level ten icon" class=" myIcons">
+            <check if="{{@level >= 10}}">
+                <true><a href="../pages/levels/10.php"><img src="../images/levelIcons/10visited.png" id="leveTenIconVisited" alt="Level nine icon" class=" myIcons"></a></true>
+                <false><img src="../images/levelIcons/10unvisited.png" id="leveTenIconUnvisited" alt="Level nine icon" class=" myIcons"></false>
+            </check>
         </div> <!-- close row 3-->
     </div> <!--close menu container-->
 
