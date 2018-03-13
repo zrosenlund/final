@@ -66,7 +66,7 @@ $f3->route('POST /signup', function ($f3) {
 //****************************************************** MENU ***************************
 
 $f3->route('GET /pages/menu', function ($f3) {
-//    $f3->set("level", 5);
+    $f3->set("level", 5);
 
 //   $f3->set("level", player.getLevel());
     echo Template::instance()->render("pages/menu.html");
@@ -107,7 +107,7 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
             echo Template::instance()->render('pages/levels/4.php');
             break;
 
-        //LEVEL 5
+//LEVEL 5
         case '5':
             echo Template::instance()->render('pages/levels/5.php');
             break;
