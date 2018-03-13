@@ -16,7 +16,7 @@ $(document).ready(function(){
         if (answer === 'route')
         {
             $('#puzzle').fadeOut("slow");
-            window.location.replace("4.php").delay("slow");
+            window.location.replace("4").delay("slow");
         }
     })
 });

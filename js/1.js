@@ -13,7 +13,7 @@ $(document).ready(function(){
         if (answer === '51497131')
         {
             $('#puzzle').fadeOut("slow");
-            window.location.replace("2.php").delay("slow");
+            window.location.replace("2").delay("slow");
         }
     });
 });

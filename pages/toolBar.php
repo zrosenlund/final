@@ -1,5 +1,5 @@
 <head>
-    <link href="styles/sideBar.css">
+    <link href="../styles/sideBar.css">
 </head>
 <!--OPEN SIDEBAR-->
 <div id="mySidenav" class="sidenav">
@@ -22,7 +22,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="../../js/cryptoFunctions.js"></script>
+<script src="../js/cryptoFunctions.js"></script>
 <script>
     $(".decode").hide();
     $(".submit").hide();
