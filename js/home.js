@@ -21,6 +21,7 @@ $(document).ready(function(){
     });
 
     $('#firstCircle').on('click', function() {
+        $(this).prop('src', '../final/images/circle-filled.png');
         $('img').addClass('circle');
         $('#secondCircle').slideDown("slow");
         $('#thirdCircle').slideDown("slow");
