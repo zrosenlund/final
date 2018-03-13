@@ -1,0 +1,47 @@
+html,
+#bodyContainer {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+#puzzleContainer {
+    min-height:100%;
+    position:relative;
+}
+#header {
+    background:#ff0;
+    padding:10px;
+}
+#body {
+    padding-bottom:0px;   /* Height of the footer */
+}
+#footer {
+    position:sticky;
+    bottom:0;
+    width:100%;
+    height:100px;   /* Height of the footer */
+    background: #111111;
+    opacity: 0.9;
+}
+
+#inputAnswer {
+    margin-left: 55px;
+}
+
+#main {
+    margin-left: 250px;
+}
+
+#puzzleContainer
+{
+    text-align: center;
+    margin-left: 300px;
+    /*position: -webkit-sticky;*/
+
+}
+
+img {
+    /*text-align: center;*/
+    width: 750px;
+    /*margin-left: 300px;*/
+}
