@@ -1,6 +1,6 @@
-//****************************************************************************************************************
+//****************************************************************************************
 //** BODY FUNCTIONS
-//****************************************************************************************************************
+//****************************************************************************************
 
 //function run when correct answer is input
 $('#inputAnswer').on('keyup', function() {
@@ -12,11 +12,10 @@ $('#inputAnswer').on('keyup', function() {
         $('#puzzle').fadeOut("slow");
         window.location.replace("6.php").delay("slow");
     }
-
 });
 
-//****************************************************************************************************************
-//** FOOTER FUNCTIONS
+//****************************************************************************************
+// ** FOOTER FUNCTIONS
 //****************************************************************************************************************
 
 //this will show the footer bar when enter is pressed
@@ -35,14 +34,13 @@ $(document).keypress(function(e) {
 function winner()
 {
     $("#differences").hide();
-    $( "#results" ).replaceWith( "<h1>You win! Password for the level is NEXT.  Press enter to bring up text input</h1>" );
+    $( "#results" ).replaceWith( "<h1 id=''>You win! Password for the level is NEXT.  Press enter to bring up text input</h1>" );
 }
 
 function addToFound()
 {
     $( "#foundList" ).replaceWith( "<h3 id='foundList'>Number found: "  + numberFound + "</h3>" );
 }
-
 
 //booleans to indicate if an item's been found
 foundOne = false;
