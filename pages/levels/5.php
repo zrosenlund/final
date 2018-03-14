@@ -30,49 +30,55 @@ error_reporting(E_ALL);
 </head>
 <body>
 
+<!-- OPEN BODY DIV-->
 <div class="d-flex flex-row h-100" id="bodyContainer">
 
     <?php require('../toolBar.php');?>
 
-<!--    <div class="w-100 d-flex justify-content-center align-items-center p-10" id="main">-->
-<!--<!--        <h2 class="display-2">Congratulations, You Won!</h2>-->-->
-<!--    </div>-->
-
+    <!-- OPEN PUZZLE CONTAINER DIV-->
     <div class="container mx-auto" id="puzzleContainer">
-        <h1>Find the 5 differences</h1>
+        <h1 id="results">Find the 5 differences</h1>
+<!--        figure out how to display the numberFound variable-->
             <img src="../../images/findTheDifferences.png" id="differences" alt="Find the differences" usemap="#findTheDifferences">
-
+        <!-- OPEN IMAGE MAP-->
         <map name="findTheDifferences">
-            //the red wires croseed
-            <area shape="rect" coords="43.08331298828125,148,97.08331298828125,190" href="#" alt="Sun" id="crossed">
-<!--            <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">-->
-<!--            <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus">-->
-        </map>
+            <!--the red wires crossed Upper picture-->
+            <area shape="rect" coords="43.08331298828125 , 148 , 97.08331298828125 , 190" href="#" alt="crossed wires" id="crossed">
+            <!-- lower picture-->
+            <area shape="rect" coords="41.600006103515625 , 556 , 97.60000610351562 , 600" href="#" alt="crossed wires" id="crossed2">
 
-    </div>
-</div>
+            <!-- the little o missing upper picture -->
+            <area shape="rect" coords="226.60000610351562 , 55, 237.60000610351562 , 65" href="#" alt="missingO" id="missingO">
+            <!-- lower picture-->
+            <area shape="rect" coords="230.60000610351562 , 468 , 233.60000610351562, 480" href="#" alt="missingO" id="missingO2">
+
+            <!-- word "position" replacing rotor-2 upper picture -->
+            <area shape="rect" coords="146.60000610351562 , 321, 180.60000610351562 , 328" href="#" alt="positionRotor" id="positionRelpacingRotor">
+            <!-- lower picture-->
+            <area shape="rect" coords="145.60000610351562  , 731 , 183.60000610351562 , 740" href="#" alt="positionRotor" id="positionRelpacingRotor2">
+
+            <!-- red line on graph moved, upper picture -->
+            <area shape="rect" coords="549.6000061035156 , 80.19999694824219, 630.6000061035156 , 92.19999694824219" href="#" alt="graphMoved" id="graphMoved">
+            <!-- lower picture-->
+            <area shape="rect" coords="545.6000061035156 , 616 , 644.6000061035156, 611" href="#" alt="graphMoved" id="graphMoved2">
+
+            <!-- alphabet gone on right side of graph - upper picture -->
+            <area shape="rect" coords="711.4499969482422 , 31.199996948242188, 720.4499969482422 , 361.1999969482422" href="#" alt="missingAlpha" id="missingAlpha">
+            <!-- lower picture-->
+            <area shape="rect" coords="711.6000061035156 , 148 , 717.6000061035156 , 773" href="#" alt="missingAlpha" id="missingAlpha2">
+
+
+        </map> <!--close map-->
+
+    </div><!-- close puzzle div-->
+</div> <!--close body div-->
     <footer id="footer" class="d-flex w-100 justify-content-center align-items-center mx-auto text-center">
         <div class="form-group">
             <input type="text" class="form-control text-center" id="inputAnswer">
         </div>
     </footer>
+<script src="../../js/5.js"></script>
 
-<script>
-    $(document).ready(function() {
-        $('#crossed').click(function(e) {
-            var offset = $(this).offset();
-            alert("you found one!");
-        });
-    });
-
-$(document).ready(function() {
-$('#differences').click(function(e) {
-var offset = $(this).offset();
-alert(e.pageX - offset.left);
-alert(e.pageY - offset.top);
-});
-});
-</script>
 <!-- -->
 <script type="text/javascript" src="scripts/jquery.imagemapster.js"><script>
 

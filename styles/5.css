@@ -21,7 +21,7 @@ html,
     width:100%;
     height:100px;   /* Height of the footer */
     background: #111111;
-    opacity: 0.9;
+    opacity: 0;
 }
 
 #inputAnswer {
@@ -35,13 +35,18 @@ html,
 #puzzleContainer
 {
     text-align: center;
-    margin-left: 300px;
-    /*position: -webkit-sticky;*/
+    margin-bottom: 100px;
+    cursor: crosshair;
+}
 
+area
+{
+    cursor: crosshair;
 }
 
 img {
-    /*text-align: center;*/
     width: 750px;
-    /*margin-left: 300px;*/
+    cursor: crosshair;
+    margin-left: 300px;
+
 }
