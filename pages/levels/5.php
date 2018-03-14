@@ -38,6 +38,7 @@ error_reporting(E_ALL);
     <!-- OPEN PUZZLE CONTAINER DIV-->
     <div class="container mx-auto" id="puzzleContainer">
         <h1 id="results">Find the 5 differences</h1>
+        <p id="foundList"></p>
 <!--        figure out how to display the numberFound variable-->
             <img src="../../images/findTheDifferences.png" id="differences" alt="Find the differences" usemap="#findTheDifferences">
         <!-- OPEN IMAGE MAP-->
