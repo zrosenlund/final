@@ -21,18 +21,16 @@ error_reporting(E_ALL);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles/level.css">
-    <link rel="stylesheet" href="../../styles/sideBar.css">
+    <link rel="stylesheet" href="../styles/level.css">
+    <link rel="stylesheet" href="../styles/sideBar.css">
     <title>The Enigma Principle</title>
 </head>
 <body>
 
 <div class="d-flex flex-row h-100" id="body">
-
-    <?php require('../toolBar.php');?>
 
     <div class="w-100 d-flex flex-column justify-content-center align-items-center p-10" id="main">
         <h2 class="display-4">00010010</h2>
@@ -52,6 +50,6 @@ error_reporting(E_ALL);
 
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="../../js/3.js"></script>
+<script src="../js/3.js"></script>
 </body>
 </html>
