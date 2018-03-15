@@ -21,11 +21,12 @@ error_reporting(E_ALL);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles/5.css">
-    <link rel="stylesheet" href="../../styles/sideBar.css">
+    <link rel="stylesheet" href="../styles/5.css">
+    <link rel="stylesheet" href="../styles/sideBar.css">
+    <link rel="icon" href="../final/images/circle-outline.png">
     <title>The Enigma Principle</title>
 </head>
 <body>
@@ -33,14 +34,12 @@ error_reporting(E_ALL);
 <!-- OPEN BODY DIV-->
 <div class="d-flex flex-row h-100" id="bodyContainer">
 
-    <?php require('../toolBar.php');?>
-
     <!-- OPEN PUZZLE CONTAINER DIV-->
     <div class="container mx-auto" id="puzzleContainer">
         <h1 id="results">Find the 5 differences</h1>
         <p id="foundList"></p>
 <!--        figure out how to display the numberFound variable-->
-            <img src="../../images/findTheDifferences.png" id="differences" alt="Find the differences" usemap="#findTheDifferences">
+            <img src="../images/findTheDifferences.png" id="differences" alt="Find the differences" usemap="#findTheDifferences">
         <!-- OPEN IMAGE MAP-->
         <map name="findTheDifferences">
             <!--the red wires crossed Upper picture-->
@@ -78,13 +77,13 @@ error_reporting(E_ALL);
             <input type="text" class="form-control text-center" id="inputAnswer">
         </div>
     </footer>
-<script src="../../js/5.js"></script>
+<script src="../js/5.js"></script>
 
 <!-- -->
 <script type="text/javascript" src="scripts/jquery.imagemapster.js"><script>
 
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="../../js/2.js"></script>
+<script src="../js/2.js"></script>
 </body>
 </html>

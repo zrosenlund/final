@@ -3,17 +3,17 @@
 </head>
 <!--OPEN SIDEBAR-->
 <div id="mySidenav" class="sidenav">
-    <a href="#" id="link1">A -> #</a>
+    <a href="#" id="link1">A-Z -> #</a>
     <input class="decode form-control" type="text" id="decode1">
     <button class="submit btn btn-dark" id="submit1">Go</button>
     <p id="result1"></p>
 
-    <a href="#" id="link2"># -> A</a>
+    <a href="#" id="link2"># -> A-Z</a>
     <input class="decode form-control" type="text" id="decode2">
     <button class="submit btn btn-dark" id="submit2">Go</button>
     <p id="result2"></p>
 
-    <a href="#" id="link3">01101101 -> #</a>
+    <a href="#" id="link3">01101101 -> A-Z</a>
     <input class="decode form-control" type="text" id="decode3">
     <button class="submit btn btn-dark" id="submit3">Go</button>
     <p id="result3"></p>
@@ -73,7 +73,7 @@
 
     $("#submit3").on("click", function() {
         var input = $("#decode3").val();
-        $("#result3").html(ConvertBase.bin2dec(input));
+        $("#result3").html(numbersToLetters(ConvertBase.bin2dec(input)));
     });
 
 </script>

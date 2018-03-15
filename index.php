@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
 //Require the autoload file
 require_once('vendor/autoload.php');
-require("/home/selkhart/config.php");
+require("/home/zrosenlu/config.php");
 
 session_start();
 
@@ -63,17 +63,9 @@ $f3->route('POST /signup', function ($f3) {
 
 });
 
-//****************************************************** MENU ***************************
-//still set manually. Need to call getLevel() on player to get their actual level
-$f3->route('GET /pages/menu', function ($f3) {
-//    $f3->set("level", 5);
 
-//   $f3->set("level", player.getLevel());
-    echo Template::instance()->render("pages/menu.html");
+//*******************************************************LEVELS **************************
 
-});
-
-//****************************************************** *LEVELS *************************
 
 //Define a default route
 $f3->route('GET /levels/@pageName', function ($f3, $params) {
@@ -83,46 +75,52 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 //MENU
         case 'menu' :
 
-            echo Template::instance()->render('GET ../pages/menu');
+            //set route
+            echo Template::instance()->render('pages/levels/menu.php');
             break;
 
 //LEVEL 1
         case '1' :
 
+            require "pages/toolBar.php";
+
             echo Template::instance()->render('pages/levels/1.php');
             break;
 //LEVEL 2
         case '2':
+            require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/2.php');
             break;
 
 //LEVEL 3
         case '3':
+            require "pages/toolBar.php";
+
             echo Template::instance()->render('pages/levels/3.php');
             break;
 //LEVEL 4
         case '4':
+            require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/4.php');
             break;
 
         //LEVEL 5
         case '5':
-            echo Template::instance()->render('pages/levels/5.php');
-            break;
+            require "pages/toolBar.php";
 
-        //LEVEL 5
-        case '6':
-            echo Template::instance()->render('pages/levels/6.php');
+            echo Template::instance()->render('pages/levels/5.php');
             break;
 
         default:
             $f3->error(404);
     }
-});
+}
 
 //****************************************************** CLOSE LEVELS  *************************
+
+);
 
 //Run fat free
 $f3->run();
