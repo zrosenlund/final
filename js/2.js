@@ -1,5 +1,6 @@
 $('#titleScreen').hide();
 $('#puzzle').hide();
+$('#link3').hide();
 
 $(document).ready(function(){
     $('#titleScreen').delay("slow").fadeIn("slow");

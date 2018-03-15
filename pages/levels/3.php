@@ -26,6 +26,7 @@ error_reporting(E_ALL);
     <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
     <link rel="stylesheet" href="../styles/level.css">
     <link rel="stylesheet" href="../styles/sideBar.css">
+    <link rel="icon" href="../../final/images/circle-outline.png">
     <title>The Enigma Principle</title>
 </head>
 <body>
@@ -36,7 +37,7 @@ error_reporting(E_ALL);
         <h2 class="display-4">00010010</h2>
         <h2 class="display-4">00001111</h2>
         <h2 class="display-4">00010101</h2>
-        <h2 class="display-4">00010101</h2>
+        <h2 class="display-4">00010100</h2>
         <h2 class="display-4">00000101</h2>
     </div>
 
