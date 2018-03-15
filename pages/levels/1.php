@@ -9,7 +9,7 @@
 ini_set("display_errors", 1);
 error_reporting(E_ALL);
 ?>
-<!doctype html>
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
 <head>
     <!--
@@ -19,14 +19,13 @@ error_reporting(E_ALL);
     The view for the index page of my dating site
     -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
     <link rel="stylesheet" href="../styles/1.css">
     <link rel="stylesheet" href="../styles/sideBar.css">
-    <link rel="icon" href="../final/images/circle-outline.png">
+    <link rel="icon" href="../../final/images/circle-outline.png">
     <title>The Enigma Principle</title>
 </head>
 <body>

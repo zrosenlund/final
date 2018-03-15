@@ -26,7 +26,7 @@ error_reporting(E_ALL);
     <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
     <link rel="stylesheet" href="../styles/5.css">
     <link rel="stylesheet" href="../styles/sideBar.css">
-    <link rel="icon" href="../final/images/circle-outline.png">
+    <link rel="icon" href="../../final/images/circle-outline.png">
     <title>The Enigma Principle</title>
 </head>
 <body>
