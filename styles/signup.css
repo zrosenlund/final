@@ -1,0 +1,7 @@
+.btn {
+    background: mediumaquamarine;
+}
+
+.btn:hover {
+    background: mediumseagreen;
+}
