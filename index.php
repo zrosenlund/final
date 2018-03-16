@@ -27,7 +27,7 @@ $f3->route('GET /', function () {
 );
 
 //****************************************************** SIGN UP *************************
-$f3->route('POST /signup', function ($f3) {
+$f3->route('GET|POST /signup', function ($f3) {
     $_SESSION['username'] = $_POST['createUsername'];
     $_SESSION['password'] = $_POST['createPassword1'];
     $f3->set('username', $_POST['createUsername']);
