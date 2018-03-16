@@ -32,12 +32,14 @@ error_reporting(E_ALL);
 
 <div class="d-flex flex-row h-100" id="body">
 
+<h3 id="toolTip" ><--- Use your tools to solve the mystery! <br> More will appear as needed </h3>
+
     <!-- REQUIRE TOOLBAR -->
     <div class="w-100 d-flex justify-content-center align-items-center p-10" id="main">
         <div class="flex-column mx-auto text-center" id="titleScreen">
-            <h1 class="display-2">Use the Tools Given to You</h1>
+<!--            <h1 class="display-2">Use the Tools Given to You</h1>-->
             <br>
-            <h1 class="display-2">To Discover the Truth</h1>
+<!--            <h1 class="display-2">To Discover the Truth</h1>-->
         </div>
         <div class="mx-auto text-center" id="puzzle">
             <h2 class="display-2">ENIGMA</h2>
@@ -46,8 +48,10 @@ error_reporting(E_ALL);
 
 </div>
 
+
 <footer id="footer" class="d-flex w-100 justify-content-center align-items-center mx-auto text-center">
     <div class="form-group">
+        <div><h3 id = "footerToolTip">Enter the password here to go to<br> <--- the next level. </h3></div>
         <input type="text" class="form-control text-center" id="inputAnswer">
     </div>
 </footer>
