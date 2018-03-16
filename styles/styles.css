@@ -4,7 +4,8 @@ html, body {
 }
 
 body {
-    background-image: url(../images/dark-blue.jpg);
+    background: url(../images/dark-blue.jpg) no-repeat;
+    background-size: cover;
     color: #f2f2f2;
 }
 

@@ -51,7 +51,7 @@ error_reporting(E_ALL);
 
 <footer id="footer" class="d-flex w-100 justify-content-center align-items-center mx-auto text-center">
     <div class="form-group">
-        <div><h3 id = "footerToolTip">Enter the password here to go to<br> <--- the next level. </h3></div>
+        <div><h6 id="footerToolTip">Enter the password here to go to<br> <--- the next level. </h6></div>
         <input type="text" class="form-control text-center" id="inputAnswer">
     </div>
 </footer>

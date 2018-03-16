@@ -2,6 +2,8 @@
 
 function validUsername($username)
 {
+
+
     if(ctype_alnum($username) && !empty($username))
     {
         return true;
