@@ -36,27 +36,3 @@ body {
 img {
     margin-bottom: 100px;
 }
-
-#toolTip
-{
-    margin-top: 50px;
-    position: absolute;
-    margin-left: 300px;
-    background: #0b0d2a;
-    color: #b6bdc5;
-    font-weight: bold;
-    border: solid 2px white;
-
-}
-
-#footerToolTip
-{
-    margin-bottom: 200px;
-    position: absolute;
-    margin-left: 600px;
-    background: #0b0d2a;
-    color: #b6bdc5;
-    font-weight: bold;
-    border: solid 2px white;
-
-}
