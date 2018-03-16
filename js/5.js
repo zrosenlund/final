@@ -10,13 +10,13 @@ $('#inputAnswer').on('keyup', function() {
     if (answer === 'next')
     {
         $('#puzzle').fadeOut("slow");
-        window.location.replace("6.php").delay("slow");
+        window.location.replace("6").delay("slow");
     }
 });
 
 //****************************************************************************************
 // ** FOOTER FUNCTIONS
-//****************************************************************************************************************
+//****************************************************************************************
 
 //this will show the footer bar when enter is pressed
 $(document).keypress(function(e) {
@@ -26,15 +26,15 @@ $(document).keypress(function(e) {
     }
 });
 
-//****************************************************************************************************************
+//*****************************************************************************************
 //** IMAGE MAP FUNCTIONS
-//****************************************************************************************************************
+//*****************************************************************************************
 
 //function run when someone finds all five differences
 function winner()
 {
     $("#differences").hide();
-    $( "#results" ).replaceWith( "<h1 id=''>You win! Password for the level is NEXT.  Press enter to bring up text input</h1>" );
+    $( "#results" ).replaceWith( "<h1>You win! Password for the level is 'next'. <br> Press enter to bring up text input</h1>" );
 }
 
 function addToFound()

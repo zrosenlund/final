@@ -15,12 +15,10 @@ require("/home/selkhart/config.php");
 
 session_start();
 
-$dbh = dbFunctions::connect();
-
 //Create an instance of the Base class
 $f3 = Base::instance();
 
-//****************************************************** ROUTES *************************
+//****************************************************** ROUTES *********************************
 //Define a default route
 $f3->route('GET /', function () {
 
@@ -28,32 +26,41 @@ $f3->route('GET /', function () {
 }
 );
 
-//****************************************************** SIGN UP *************************
-$f3->route('GET|POST /signup', function ($f3) {
-    $username = $_POST['createUsername'];
-    $password = $_POST['createPassword1'];
+//****************************************************** SIGN UP *********************************
+$f3->route('POST /signup', function ($f3) {
+    $_SESSION['username'] = $_POST['createUsername'];
+    $_SESSION['password'] = $_POST['createPassword1'];
     $f3->set('username', $_POST['createUsername']);
     $f3->set('password', $_POST['createPassword1']);
 
-    require_once('model/validation.php');
-
-    if(!validUsername($username)) {
-        $errors['username'] = 'Please enter a valid username.';
+    try {
+        //Instantiate a database object
+        $dbh = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+        return;
     }
 
-    if(!validPassword($password)) {
-        $errors['password'] = 'Please enter a valid password.';
-    }
+    //Define the query
+    $sql = "INSERT INTO users(username, password, level)
+           VALUES (:username, :password, :level)";
 
-    if (sizeof($errors) > 0) {
-        $_SESSION['errors'] = $errors;
-        header("location: ../");
-    }
+    //Prepare the statement
+    $statement = $dbh->prepare($sql);
 
+    //Bind the parameters
+    $username = $_SESSION['username'];
+    $password = $_SESSION['password'];
+    $level = 1;
+    $statement->bindParam(':username', $username, PDO::PARAM_STR);
+    $statement->bindParam(':password', $password, PDO::PARAM_STR);
+    $statement->bindParam(':level', $level, PDO::PARAM_STR);
 
-    $result = dbFunctions::insertUser($username, $password, 1);
+    //Execute
+    $statement->execute();
 
     echo Template::instance()->render("pages/signup.html");
+
 });
 
 
@@ -69,12 +76,11 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
         case 'menu' :
 
             //set route
-            echo Template::instance()->render('pages/menu.html');
+            echo Template::instance()->render('pages/levels/menu.php');
             break;
 
 //LEVEL 1
         case '1' :
-
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/1.php');
@@ -106,7 +112,7 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
             echo Template::instance()->render('pages/levels/5.php');
             break;
 
-        //LEVEL 5
+        //LEVEL 6
         case '6':
             require "pages/toolBar.php";
 
