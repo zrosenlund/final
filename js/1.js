@@ -10,6 +10,9 @@ $(document).ready(function(){
     $('#titleScreen').delay("slow").fadeIn("slow");
     $('#titleScreen').delay(3000).fadeOut("slow");
     $('#puzzle').delay(5000).fadeIn("slow");
+    $('#puzzle').delay(2000).fadeIn("slow");
+    $('#toolTip').delay(2300).fadeIn("slow");
+    $('#footerToolTip').delay(5500).fadeIn("slow");
 
     $('#inputAnswer').on('keyup', function() {
         var answer = $('#inputAnswer').val();
@@ -20,5 +23,14 @@ $(document).ready(function(){
             $('#puzzle').fadeOut("slow");
             window.location.replace("menu").delay("slow");
         }
+    });
+
+    $('#link1').click(function () {
+        $("#toolTip").fadeOut("slow");
+    });
+
+    //Instructions for input level 1
+    $('#inputAnswer').click(function () {
+        $("#footerToolTip").fadeOut("slow");
     });
 });
