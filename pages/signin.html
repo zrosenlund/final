@@ -19,18 +19,22 @@
 <body>
 <div class="w-100 mx-auto d-flex justify-content-center align-items-center" id="main">
     <div class="flex-column mx-auto" id="titleScreen">
-        <h1 class="display-2">Welcome, {{ @username }}</h1>
+        <h1 class="display-2">Welcome back, {{ @username }}</h1>
     </div>
-    <div class="flex-column mx-auto text-center" id="message">
-        <h2 class="display-4">You have entered the Enigma Principle. It is now your mission to decrypt the following messages.</h2><br><br>
-        <h2>Discover the Truth, detective. Everything that you will need to complete your mission has been provided to you. Good luck.</h2>
-        <br><br>
-        <button class="btn btn-dark" id="goToLevel1">Begin</button>
+    <div class="mx-auto text-center" id="message">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-dark">Menu</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-dark">Most Recent Mission</button>
+            </div>
+        </div>
     </div>
 </div>
 
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="../final/js/signup.js"></script>
+<script src="../final/js/signin.js"></script>
 </body>
 </html>
