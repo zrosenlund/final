@@ -112,7 +112,7 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
             echo Template::instance()->render('pages/levels/5.php');
             break;
 
-<<<<<<< HEAD
+
         //LEVEL 6
         case '6':
             require "pages/toolBar.php";
@@ -120,8 +120,6 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
             echo Template::instance()->render('pages/levels/6.php');
             break;
 
-=======
->>>>>>> d81dee9faefca07a21b5dfb5eb31f6ef8514d2c0
         default:
             $f3->error(404);
     }
