@@ -37,9 +37,22 @@ error_reporting(E_ALL);
 <!--            <h1 class="display-2">To Discover the Truth</h1>-->
         </div>
         <div class="mx-auto text-center" id="puzzle">
-            <h2 class="display-2">Congratuations! </h2>
-            <h5></h5>
-            <img src="../images/Congrats.png" id="congrats" alt="theCode">
+            <h3>Congratuations Detective, you've found the key to the enigma machine </h3>
+            <p id="test"></p>
+            <img src="../images/code.png" id="code" alt="theCode" usemap="#code">
+            <map name="code">
+                <!--the red wires crossed Upper picture-->
+                <area coords="616 , 132 , 652 , 182" href="http://www.facebook.com" shape="rect"  />
+            </map> <!--close map-->
+<script>
+    document.addEventListener('click', printMousePos, true);
+    function printMousePos(e){
+
+        cursorX = e.pageX;
+        cursorY= e.pageY;
+        $( "#test" ).text( "pageX: " + cursorX +",pageY: " + cursorY );
+    }
+</script>
         </div>
     </div>
 

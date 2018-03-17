@@ -1,7 +1,8 @@
 //****************************************************************************************
 //** BODY FUNCTIONS
 //****************************************************************************************
-
+//boolean to show footer
+var showFooter = false;
 //function run when correct answer is input
 $('#inputAnswer').on('keyup', function() {
     var answer = $('#inputAnswer').val();
@@ -9,6 +10,7 @@ $('#inputAnswer').on('keyup', function() {
 
     if (answer === 'next')
     {
+        showFooter = true;
         $('#puzzle').fadeOut("slow");
         window.location.replace("6").delay("slow");
     }
@@ -19,12 +21,13 @@ $('#inputAnswer').on('keyup', function() {
 //****************************************************************************************
 
 //this will show the footer bar when enter is pressed
-$(document).keypress(function(e) {
-    if ((e.keyCode || e.which) == 13) {
+
+    if (showFooter = true)
+    {
         // Enter key pressed
         $('#footer').css("opacity", "1");
-    }
-});
+    };
+
 
 //*****************************************************************************************
 //** IMAGE MAP FUNCTIONS
