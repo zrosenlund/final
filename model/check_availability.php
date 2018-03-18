@@ -6,24 +6,12 @@
  * Time: 3:17 PM
  */
 
-function connect()
-{
-    try {
-        //Instantiate a database object
-        $dbh = new PDO(DB_DSN, DB_USERNAME,
-            DB_PASSWORD);
-        return $dbh;
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-        return;
-    }
-}
 
 if(!empty($_POST["username"])) {
-    $dbh = connect();
+    $dbh = dbFunctions::connect();
 
 
-    $sql = ("SELECT count(*) FROM users WHERE username= :username");
+    $sql = ("SELECT id FROM users WHERE username = :username");
 
     //prepare statement
     $statement = $dbh->prepare($sql);
@@ -36,10 +24,11 @@ if(!empty($_POST["username"])) {
     $statement->execute();
 
     //get results
-    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $result = $statement->fetch(PDO::FETCH_ASSOC) ;
+    $result->rowCount() ;
 
     //check if username is already in use
-    if(!empty($result))
+    if($result === 1)
         {
             echo "<span class='status-not-available'> Username Not Available.</span>";
         }

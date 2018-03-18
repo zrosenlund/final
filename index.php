@@ -76,7 +76,7 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
         case 'menu' :
 
             //set route
-            echo Template::instance()->render('pages/levels/menu.php');
+            echo Template::instance()->render('pages//menu.html');
             break;
 
 //LEVEL 1

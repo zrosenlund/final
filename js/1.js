@@ -1,19 +1,21 @@
+//hide elements
 $('#titleScreen').hide();
 $('#puzzle').hide();
 $('#link2').hide();
 $('#link3').hide();
 $('#link4').hide();
+$('#toolTip').hide();
+$('#footerToolTip').hide();
 
 
 $(document).ready(function(){
 
-    $('#titleScreen').delay("slow").fadeIn("slow");
-    $('#titleScreen').delay(3000).fadeOut("slow");
-    $('#puzzle').delay(5000).fadeIn("slow");
+    //fade in the clue and hints
     $('#puzzle').delay(2000).fadeIn("slow");
     $('#toolTip').delay(2300).fadeIn("slow");
     $('#footerToolTip').delay(5500).fadeIn("slow");
 
+//input answer and verify
     $('#inputAnswer').on('keyup', function() {
         var answer = $('#inputAnswer').val();
         answer = answer.toLowerCase();
@@ -24,7 +26,7 @@ $(document).ready(function(){
             window.location.replace("menu").delay("slow");
         }
     });
-
+    // Instruction for tool level 1
     $('#link1').click(function () {
         $("#toolTip").fadeOut("slow");
     });
