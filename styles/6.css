@@ -1,6 +1,24 @@
 
 img {
-    width: 350px;
-    margin-right: 300px;
+    width: 450px;
+    margin-right: 200px;
     margin-top: 10px;
+}
+
+#code{
+    color: red;
+    font-size: 50px;
+    margin-right: 100px;
+}
+
+#congrats
+{
+    margin-right: 100px;
+}
+#puzzle{
+    margin-right: 100px;
+}
+#plans
+{
+    padding-top: 10px;
 }

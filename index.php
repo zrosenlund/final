@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
 //Require the autoload file
 require_once('vendor/autoload.php');
-require("/home/zrosenlu/config.php");
+require("/home/selkhart/config.php");
 
 session_start();
 
@@ -118,6 +118,13 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/6.php');
+            break;
+
+        //LEVEL 7
+        case '7':
+            require "pages/toolBar.php";
+
+            echo Template::instance()->render('pages/levels/7.php');
             break;
 
         default:

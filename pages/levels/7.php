@@ -21,7 +21,7 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="../styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/6.css">
+    <link rel="stylesheet" href="../styles/7.css">
     <link rel="stylesheet" href="../styles/sideBar.css">
     <title>The Enigma Principle</title>
 </head>
@@ -34,9 +34,9 @@ error_reporting(E_ALL);
 
         </div>
         <div class="mx-auto text-center" id="puzzle">
-            <h2 id="congrats">Congratuations Detective, you've cracked the </h2><h1 id="code">code</h1>
-            <img src="../images/code.png" id="code" alt="theCode">
-            <h2 id="plans">Now we can use the code to find out enemy plans</h2>
+            <h3></h3>
+            <p id="test"></p>
+            <img src="../images/extraEnding.png" id="classified" alt="theMemo">
         </div>
     </div >
 

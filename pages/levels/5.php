@@ -36,7 +36,7 @@ error_reporting(E_ALL);
 
     <!-- OPEN PUZZLE CONTAINER DIV-->
     <div class="container mx-auto" id="puzzleContainer">
-        <h1 id="results">Find the 5 differences</h1>
+        <h1 id="results">Click on the 5 differences</h1>
         <p id="foundList"></p>
 <!--        figure out how to display the numberFound variable-->
             <img src="../images/findTheDifferences.png" id="differences" alt="Find the differences" usemap="#findTheDifferences">
@@ -79,8 +79,11 @@ error_reporting(E_ALL);
     </footer>
 <script src="../js/5.js"></script>
 
+<!-- -->
+<script type="text/javascript" src="scripts/jquery.imagemapster.js"><script>
+
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="../js/3.js"></script>
+<script src="../js/2.js"></script>
 </body>
 </html>
