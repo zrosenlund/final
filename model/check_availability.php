@@ -6,6 +6,8 @@
  * Time: 3:17 PM
  */
 
+require("connection.php");
+require("../classes/dbFunctions.php");
 
 if(!empty($_POST["username"])) {
     $dbh = dbFunctions::connect();
@@ -25,10 +27,10 @@ if(!empty($_POST["username"])) {
 
     //get results
     $result = $statement->fetch(PDO::FETCH_ASSOC) ;
-    $result->rowCount() ;
+    $check - $result->rowCount() ;
 
     //check if username is already in use
-    if($result === 1)
+    if($checkt === 1)
         {
             echo "<span class='status-not-available'> Username Not Available.</span>";
         }
