@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
           integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/menu.css">
-
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +21,7 @@
 
         <!-- OPEN HEADER CONTENT-->
         <div class="container text-center" id="header">
-            <
+            <h1 class="display-2" id="menu">Menu</h1>
         </div> <!-- close header content-->
 
     <!-- OPEN MENU CONTAINER-->
@@ -61,8 +63,8 @@
 
             <!--level 6-->
             <check if="{{@level >= 6}}">
-                <true> <a href="{{ @BASE }}/levels/6" ><img src="../images/levelIcons/6unvisited.png" id="levelSixIconVisited" alt="Level six icon" class=" myIcons"></a></true>
-                <false><img src="../images/levelIcons/6visited.png" id="levelSixIconVvisited" alt="Level six icon" class=" myIcons"></false>
+                <true> <a href="{{ @BASE }}/levels/6" ><img src="../images/levelIcons/6visited.png" id="levelSixIconVisited" alt="Level six icon" class=" myIcons"></a></true>
+                <false><img src="../images/levelIcons/6unvisited.png" id="levelSixIconVvisited" alt="Level six icon" class=" myIcons"></false>
             </check>
 
 
