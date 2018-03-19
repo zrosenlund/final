@@ -21,7 +21,7 @@ class dbFunctions
         }
     }
 
-    static function getMember($username)
+    static function getUser($username)
     {
         $dbh = dbFunctions::connect();
         //1. Define the query

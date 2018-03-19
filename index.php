@@ -50,6 +50,21 @@ $f3->route('POST /signup', function ($f3) {
     }
 });
 
+//****************************************************** SIGN UP *********************************
+$f3->route('POST /signin', function ($f3) {
+
+    require_once('model/validation.php');
+
+    $_SESSION['username'] = $_POST['inputUsername'];
+    $_SESSION['password'] = $_POST['inputPassword1'];
+    $f3->set('playerName', $_SESSION['username']);
+
+    $username = $_SESSION['username'];
+
+    $result = dbFunctions::getUser($username);
+    $_SESSION['player'] = new Player($username, $result['level']);
+    echo Template::instance()->render("pages/signin.html");
+});
 
 //*******************************************************LEVELS **************************
 

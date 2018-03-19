@@ -2,7 +2,6 @@
 
 function validUsername($username)
 {
-    require ("check_availability.php");
     if(ctype_alnum($username) && !empty($username))
     {
         return true;
