@@ -50,4 +50,22 @@ $(document).ready(function(){
         $('.circle').prop('src', '../final/images/circle-outline.png');
         $('#titleScreen').delay("slow").fadeIn("slow");
     })
+
+    $('#newUserSubmit').on('click', function() {
+        var username = $('#checkAvailabilty').html();
+
+        if (username === "")
+        {
+            $('#signup').submit();
+        }
+    });
+
+    $('#createPassword2').on('blur', function() {
+        var password1 = $('#createPassword1').val();
+        var password2 = $('#createPassword2').val();
+        if (password1 !== password2)
+        {
+            $('#checkPassword').html('Passwords do not match');
+        }
+    });
 });
