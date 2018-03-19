@@ -14,9 +14,9 @@ error_reporting(E_ALL);
 <head>
     <!--
     Zachary Rosenlund & Sarah Elkhart
-    1/19/18
-    home.html
-    The view for the index page of my dating site
+    3/10/18
+    1.php
+    Level one
     -->
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -51,7 +51,7 @@ error_reporting(E_ALL);
 
 <footer id="footer" class="d-flex w-100 justify-content-center align-items-center mx-auto text-center">
     <div class="form-group">
-        <div><h6 id="footerToolTip">Enter the password here to go to<br> <--- the next level. </h6></div>
+        <div><h3 id = "footerToolTip">Enter the password here to go to<br> <--- the next level. </h3></div>
         <input type="text" class="form-control text-center" id="inputAnswer">
     </div>
 </footer>

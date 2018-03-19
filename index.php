@@ -11,7 +11,8 @@ error_reporting(E_ALL);
 
 //Require the autoload file
 require_once('vendor/autoload.php');
-require("/home/selkhart/config.php");
+
+require_once("classes/dbFunctions.php");
 
 session_start();
 
@@ -28,38 +29,34 @@ $f3->route('GET /', function () {
 
 //****************************************************** SIGN UP *********************************
 $f3->route('POST /signup', function ($f3) {
+
+    require_once('model/validation.php');
+
     $_SESSION['username'] = $_POST['createUsername'];
     $_SESSION['password'] = $_POST['createPassword1'];
     $f3->set('username', $_POST['createUsername']);
     $f3->set('password', $_POST['createPassword1']);
 
-    try {
-        //Instantiate a database object
-        $dbh = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-        return;
-    }
-
-    //Define the query
-    $sql = "INSERT INTO users(username, password, level)
-           VALUES (:username, :password, :level)";
-
-    //Prepare the statement
-    $statement = $dbh->prepare($sql);
-
     //Bind the parameters
     $username = $_SESSION['username'];
     $password = $_SESSION['password'];
     $level = 1;
-    $statement->bindParam(':username', $username, PDO::PARAM_STR);
-    $statement->bindParam(':password', $password, PDO::PARAM_STR);
-    $statement->bindParam(':level', $level, PDO::PARAM_STR);
 
-    //Execute
-    $statement->execute();
+    if (validUsername($username))
+    {
+        dbFunctions::insertUser($username, $password, $level);
+        echo Template::instance()->render("pages/signup.html");
+    }
 
-    echo Template::instance()->render("pages/signup.html");
+    //IT WORKS UP TO HERE. BUT IF THE USERNAME ISNT VALID THEN IT STILL LETS USER MAKE DUPLICATE USERNAME
+    else
+        {
+            //this didn't work ;(
+            $f3->reroute('signup');
+        }
+
+
+
 
 });
 
@@ -76,7 +73,7 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
         case 'menu' :
 
             //set route
-            echo Template::instance()->render('pages//menu.html');
+            echo Template::instance()->render('pages/menu.html');
             break;
 
 //LEVEL 1

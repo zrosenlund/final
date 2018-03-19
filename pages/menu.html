@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
           integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/menu.css">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
+
 </head>
 
 <body>
@@ -21,7 +19,7 @@
 
         <!-- OPEN HEADER CONTENT-->
         <div class="container text-center" id="header">
-            <h1 class="display-2">Menu</h1>
+            <img src="../images/Menu.png" id="menu" alt="menu">
         </div> <!-- close header content-->
 
     <!-- OPEN MENU CONTAINER-->
@@ -30,18 +28,18 @@
     <!-- MENU ROW 1-->
         <div class="text-center w-100 mx-auto">
             <!-- level 1-->
-            <a href="1" > <img src="../images/levelIcons/1visited.png" id="levelOneIconVisited" alt="Level one icon" class="myIcons"> </a>
+            <a href="{{ @BASE }}/levels/1" > <img src="../images/levelIcons/1visited.png" id="levelOneIconVisited" alt="Level one icon" class="myIcons"> </a>
 
         <!-- Levels 2 check -->
             <check if="{{ @level >= 2 }}">
-                <true><a href="2"><img src="../images/levelIcons/2visited.png" id="levelTwoIconVisited" alt="Level two icon" class="myIcons"></a> </true>
+                <true><a href="{{ @BASE }}/levels/2"><img src="../images/levelIcons/2visited.png" id="levelTwoIconVisited" alt="Level two icon" class="myIcons"></a> </true>
 
                 <false><img src="../images/levelIcons/2unvisited.png" id="levelTwoIconUnvisited" alt="Level two icon" class="myIcons"></false>
             </check>
 
          <!-- Levels 3 check -->
             <check if="{{@level >= 3 }}">
-                <true><a href="3"><img src="../images/levelIcons/3visited.png" id="levelThreeIconVisited" alt="Level three icon" class="myIcons"></a> </true>
+                <true><a href="{{ @BASE }}/levels/3"><img src="../images/levelIcons/3visited.png" id="levelThreeIconVisited" alt="Level three icon" class="myIcons"></a> </true>
 
                 <false><img src="../images/levelIcons/3unvisited.png" id="levelThreeIconUnvisited" alt="Level three icon" class="myIcons"></false>
             </check>
@@ -51,24 +49,33 @@
         <div class="justify-items-center w-100 mx-auto">
             <!-- level 4-->
             <check if="{{@level >= 4 }}">
-                <true><a href="4" ><img src="../images/levelIcons/4visited.png" id="levelFourIconVisited" alt="Level four icon" class=" myIcons"></a></true>
+                <true><a href="{{ @BASE }}/levels/4" ><img src="../images/levelIcons/4visited.png" id="levelFourIconVisited" alt="Level four icon" class=" myIcons"></a></true>
                 <false><img src="../images/levelIcons/4unvisited.png" id="levelFourIconUnvisited" alt="Level four icon" class=" myIcons"></false>
             </check>
 
             <!-- level 5-->
             <check if="{{@level >= 5 }}">
-                <true><a href="5" ><img src="../images/levelIcons/5visited.png" id="levelFiveIconVisited" alt="Level five icon" class=" myIcons"></a></true>
+                <true><a href="{{ @BASE }}/levels/5" ><img src="../images/levelIcons/5visited.png" id="levelFiveIconVisited" alt="Level five icon" class=" myIcons"></a></true>
                 <false><img src="../images/levelIcons/5unvisited.png" id="levelFiveIconUnvisited" alt="Level five icon" class=" myIcons"></false>
             </check>
 
             <!--level 6-->
             <check if="{{@level >= 6}}">
-                <true> <a href="6"><img src="../images/levelIcons/6visited.png" id="levelSixIconVisited" alt="Level six icon" class=" myIcons"></a></true>
-                <false><img src="../images/levelIcons/6unvisited.png" id="levelSixIconVvisited" alt="Level six icon" class=" myIcons"></false>
+                <true> <a href="{{ @BASE }}/levels/6" ><img src="../images/levelIcons/6unvisited.png" id="levelSixIconVisited" alt="Level six icon" class=" myIcons"></a></true>
+                <false><img src="../images/levelIcons/6visited.png" id="levelSixIconVvisited" alt="Level six icon" class=" myIcons"></false>
             </check>
 
 
         </div> <!-- close row 2-->
+
+        <!-- MENU ROW 3-->
+        <div class=" text-center w-100 mx-auto">
+            <!-- level 7-->
+            <check if="{{@level >= 7}}">
+                <true><a href="{{ @BASE }}/levels/7"><img src="../images/levelIcons/7visited.png" id="levelSevenIconVisited" alt="Level seven icon" class=" myIcons"></a></true>
+                <false><img src="../images/levelIcons/7unvisited.png" id="leveSevenIconUnvisited" alt="Level seven icon" class=" myIcons"></false>
+            </check>
+
 
     </div> <!--close menu container-->
 
@@ -76,6 +83,6 @@
 
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="../js/home.js";></script>
+<script src="../final/js/home.js";></script>
 </body>
 </html>

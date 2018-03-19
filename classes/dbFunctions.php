@@ -5,7 +5,7 @@
  * Date: 3/15/2018
  * Time: 4:03 PM
  */
-
+require_once("/home/selkhart/config.php");
 class dbFunctions
 {
 
@@ -24,7 +24,7 @@ class dbFunctions
 
     static function getMembers()
     {
-        global $dbh;
+        $dbh = dbFunctions::connect();
         //1. Define the query
         $sql = "SELECT * FROM users ORDER BY username";
         //2. Prepare the statement
@@ -40,7 +40,7 @@ class dbFunctions
 
     static function insertUser($username, $password, $level)
     {
-        global $dbh;
+        $dbh = dbFunctions::connect();
 
         //Define the query
         $sql = "INSERT INTO users(username, password, level)
@@ -48,11 +48,34 @@ class dbFunctions
 
         //Prepare the statement
         $statement = $dbh->prepare($sql);
+
+        //bind the parameters
         $statement->bindParam(':username', $username, PDO::PARAM_STR);
         $statement->bindParam(':password', $password, PDO::PARAM_STR);
         $statement->bindParam(':level', $level, PDO::PARAM_INT);
 
         //4. Execute the query
+        $result = $statement->execute();
+
+        //5. Return the result
+        return $result;
+    }
+
+    static function setLevel ($username, $level)
+    {
+        $dbh = dbFunctions::connect();
+
+        //Define the query
+        $sql = "INSERT INTO users( level)
+        VALUES (:level)";
+
+        //prepare
+        $statement = $dbh->prepare($sql);
+
+        //bind
+        $statement->bindParam(':level', $level, PDO::PARAM_INT);
+
+        //execute
         $result = $statement->execute();
 
         //5. Return the result
