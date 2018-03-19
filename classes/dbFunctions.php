@@ -5,7 +5,7 @@
  * Date: 3/15/2018
  * Time: 4:03 PM
  */
-require_once("/home/selkhart/config.php");
+require_once("/home/zrosenlu/config.php");
 class dbFunctions
 {
 
