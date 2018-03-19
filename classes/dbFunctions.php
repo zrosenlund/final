@@ -72,7 +72,7 @@ class dbFunctions
         $statement = $dbh->prepare($sql);
 
         //bind
-        $statement->bindParam(':username', $username, PDO::PARAM_STRING);
+        $statement->bindParam(':username', $username, PDO::PARAM_STR);
         $statement->bindParam(':level', $level, PDO::PARAM_INT);
 
         //execute

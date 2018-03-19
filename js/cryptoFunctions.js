@@ -1,13 +1,15 @@
-function numbersToLetters(string) {
-    string = string.toLowerCase();
-    return string.split(' ').map(function(c){
-        return 'abcdefghijklmnopqrstuvwxyz'.charAt(c-1);
-    }).join(' ');
+function numbersToLetters(int) {
+    int = int.toLowerCase();
+    if (!isNaN(int)) {
+        return int.split(' ').map(function (c) {
+            return 'abcdefghijklmnopqrstuvwxyz'.charAt(c - 1);
+        }).join(' ');
+    }
 }
 
 function lettersToNumbers(string){
     string = string.toLowerCase();
-    return string.split('').map(function(c){
+    return string.split('').map(function (c) {
         return 'abcdefghijklmnopqrstuvwxyz'.indexOf(c) + 1;
     }).join(' ');
 }

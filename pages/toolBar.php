@@ -40,7 +40,13 @@
     // text input when submit button is hit
     $("#submit1").on("click", function() {
         var input = $("#decode1").val();
-        $("#result1").html(lettersToNumbers(input));
+        var regex = new RegExp('^0( 0 ?)*$');
+        if (regex.test(lettersToNumbers(input))) {
+
+        }
+        else {
+            $("#result1").html(lettersToNumbers(input));
+        }
     });
     //TOOL 2
     //text input
