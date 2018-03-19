@@ -59,4 +59,13 @@ $(document).ready(function(){
             $('#signup').submit();
         }
     });
+
+    $('#createPassword2').on('blur', function() {
+        var password1 = $('#createPassword1').val();
+        var password2 = $('#createPassword2').val();
+        if (password1 !== password2)
+        {
+            $('#checkPassword').html('Passwords do not match');
+        }
+    });
 });
