@@ -50,4 +50,13 @@ $(document).ready(function(){
         $('.circle').prop('src', '../final/images/circle-outline.png');
         $('#titleScreen').delay("slow").fadeIn("slow");
     })
+
+    $('#newUserSubmit').on('click', function() {
+        var username = $('#checkAvailabilty').html();
+
+        if (username === "")
+        {
+            $('#signup').submit();
+        }
+    });
 });

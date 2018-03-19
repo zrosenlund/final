@@ -6,7 +6,7 @@
  * Time: 3:17 PM
  */
 
-require_once(getenv('HOME') . "/public_html/328/final/classes/dbFunctions.php");
+require_once(getenv('HOME') . "/public_html/328/assignments/final/classes/dbFunctions.php");
 
 if(!empty($_POST["username"])) {
     $dbh = dbFunctions::connect();
