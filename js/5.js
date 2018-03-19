@@ -12,7 +12,7 @@ $('#inputAnswer').on('keyup', function() {
     {
         showFooter = true;
         $('#puzzle').fadeOut("slow");
-        window.location.replace("6").delay("slow");
+        window.location.replace("shash").delay("slow");
     }
 });
 

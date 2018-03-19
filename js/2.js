@@ -17,7 +17,7 @@ $(document).ready(function(){
         if (answer === 'binary')
         {
             $('#puzzle').fadeOut("slow");
-            window.location.replace("3").delay("slow");
+            window.location.replace("sey").delay("slow");
         }
     })
 });

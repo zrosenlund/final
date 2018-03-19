@@ -11,7 +11,7 @@ $(document).ready(function(){
         if (answer === '43459323')
         {
             $('#puzzle').fadeOut("slow");
-            window.location.replace("7").delay("slow");
+            window.location.replace("haft").delay("slow");
         }
     });
 
