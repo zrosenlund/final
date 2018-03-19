@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
 //Require the autoload file
 require_once('vendor/autoload.php');
-require_once("classes/dbFunctions.php");
+require("/home/selkhart/config.php");
 
 session_start();
 
@@ -28,34 +28,39 @@ $f3->route('GET /', function () {
 
 //****************************************************** SIGN UP *********************************
 $f3->route('POST /signup', function ($f3) {
-
-    require_once('model/validation.php');
-
     $_SESSION['username'] = $_POST['createUsername'];
     $_SESSION['password'] = $_POST['createPassword1'];
+
     $f3->set('username', $_POST['createUsername']);
     $f3->set('password', $_POST['createPassword1']);
+
+    try {
+        //Instantiate a database object
+        $dbh = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+        return;
+    }
+
+    //Define the query
+    $sql = "INSERT INTO users(username, password, level)
+           VALUES (:username, :password, :level)";
+
+    //Prepare the statement
+    $statement = $dbh->prepare($sql);
 
     //Bind the parameters
     $username = $_SESSION['username'];
     $password = $_SESSION['password'];
     $level = 1;
+    $statement->bindParam(':username', $username, PDO::PARAM_STR);
+    $statement->bindParam(':password', $password, PDO::PARAM_STR);
+    $statement->bindParam(':level', $level, PDO::PARAM_STR);
 
-    if (validUsername($username))
-    {
-        dbFunctions::insertUser($username, $password, $level);
-        echo Template::instance()->render("pages/signup.html");
-    }
+    //Execute
+    $statement->execute();
 
-    //IT WORKS UP TO HERE. BUT IF THE USERNAME ISNT VALID THEN IT STILL LETS USER MAKE DUPLICATE USERNAME
-    else
-        {
-            //this didn't work ;(
-            $f3->reroute('signup');
-        }
-
-
-
+    echo Template::instance()->render("pages/signup.html");
 
 });
 
@@ -72,30 +77,30 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
         case 'menu' :
 
             //set route
-            echo Template::instance()->render('pages/menu.html');
+            echo Template::instance()->render('pages//menu.html');
             break;
 
 //LEVEL 1
-        case '1' :
+        case 'yak' :
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/1.php');
             break;
 //LEVEL 2
-        case '2':
+        case 'du':
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/2.php');
             break;
 
 //LEVEL 3
-        case '3':
+        case 'sey':
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/3.php');
             break;
 //LEVEL 4
-        case '4':
+        case 'char':
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/4.php');
@@ -110,14 +115,14 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 
 
         //LEVEL 6
-        case '6':
+        case 'shash':
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/6.php');
             break;
 
         //LEVEL 7
-        case '7':
+        case 'haft':
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/7.php');
