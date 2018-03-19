@@ -53,8 +53,9 @@ $(document).ready(function(){
 
     $('#newUserSubmit').on('click', function() {
         var username = $('#checkAvailabilty').html();
+        var password = $('#checkPassword').html();
 
-        if (username === "")
+        if (username === "" && password === "")
         {
             $('#signup').submit();
         }
@@ -66,6 +67,10 @@ $(document).ready(function(){
         if (password1 !== password2)
         {
             $('#checkPassword').html('Passwords do not match');
+        }
+        else if (password === password2)
+        {
+            $('#checkPassword').html('');
         }
     });
 });
