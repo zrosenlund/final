@@ -37,7 +37,13 @@ $("#link2").click(function(){
 // text input when submit button is hit
 $("#submit2").on("click", function() {
     var input = $("#decode2").val();
-    $("#result2").html(numbersToLetters(input));
+    var regex = new RegExp('^0( 0 ?)*$');
+    if (regex.test(numbersToLetters(input))) {
+
+    }
+    else {
+        $("#result2").html(numbersToLetters(input));
+    }
 });
 //TOOL 3
 //text input
