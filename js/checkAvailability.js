@@ -1,13 +1,13 @@
-require("check_availability.php");
-require("../classes/dbFunctions.php");
+
 
 function checkAvailability() {
     jQuery.ajax({
         url: "../final/model/check_availability.php",
-        data:'username='+$("#createUsername").val(),
+        data:{username : $("#createUsername").val()},
         type: "POST",
         success:function(data){
-            $("#checkAvailiabilty").html(data);
+            $("#checkAvailabilty").html(data);
+            console.log(data);
         },
         error:function (){}
     });
