@@ -1,5 +1,3 @@
-
-
 function checkAvailability() {
     jQuery.ajax({
         url: "../final/model/check_availability.php",
@@ -12,7 +10,3 @@ function checkAvailability() {
         error:function (){}
     });
 }
-
-$('#createUsername').on('blur', function() {
-    checkAvailability();
-});

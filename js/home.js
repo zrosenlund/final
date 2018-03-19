@@ -51,6 +51,14 @@ $(document).ready(function(){
         $('#titleScreen').delay("slow").fadeIn("slow");
     })
 
+    $('#createUsername').on('blur', function() {
+        checkAvailability();
+    });
+
+    $('#inputPassword1').on('blur', function() {
+        checkPassword();
+    });
+
     $('#newUserSubmit').on('click', function() {
         var username = $('#checkAvailabilty').html();
         var password = $('#checkPassword').html();
@@ -71,6 +79,15 @@ $(document).ready(function(){
         else if (password === password2)
         {
             $('#checkPassword').html('');
+        }
+    });
+
+    $('#loginUser').on('click', function() {
+        var password = $('#verifyPassword').html();
+
+        if (password === "")
+        {
+            $('#login').submit();
         }
     });
 });

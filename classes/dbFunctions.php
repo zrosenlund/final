@@ -81,7 +81,4 @@ class dbFunctions
         //5. Return the result
         return $result;
     }
-
-
-
 }
