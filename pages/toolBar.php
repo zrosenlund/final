@@ -18,7 +18,7 @@
     <button class="submit btn btn-dark" id="submit3">Go</button>
     <p id="result3"></p>
 
-    <a href="#" id="link4">Menu</a>
+    <a href="menu" id="link4">Menu</a>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
