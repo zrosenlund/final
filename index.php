@@ -87,7 +87,10 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 
 //LEVEL 3
         case '3':
-            $_SESSION['player']->setLevel(3);
+            if ($_SESSION['player']->getLevel() < 3) {
+                dbFunctions::setLevel($_SESSION['player']->getName(), 3);
+                $_SESSION['player']->setLevel(3);
+            }
             $f3->set('level', $_SESSION['player']->getLevel());
 
             require "pages/toolBar.php";
@@ -96,7 +99,10 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
             break;
 //LEVEL 4
         case '4':
-            $_SESSION['player']->setLevel(4);
+            if ($_SESSION['player']->getLevel() < 4) {
+                dbFunctions::setLevel($_SESSION['player']->getName(), 4);
+                $_SESSION['player']->setLevel(4);
+            }
             $f3->set('level', $_SESSION['player']->getLevel());
 
             require "pages/toolBar.php";
@@ -106,7 +112,10 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 
         //LEVEL 5
         case '5':
-            $_SESSION['player']->setLevel(5);
+            if ($_SESSION['player']->getLevel() < 5) {
+                dbFunctions::setLevel($_SESSION['player']->getName(), 5);
+                $_SESSION['player']->setLevel(5);
+            }
             $f3->set('level', $_SESSION['player']->getLevel());
 
             require "pages/toolBar.php";
@@ -117,7 +126,10 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 
         //LEVEL 6
         case '6':
-            $_SESSION['player']->setLevel(6);
+            if ($_SESSION['player']->getLevel() < 6) {
+                dbFunctions::setLevel($_SESSION['player']->getName(), 6);
+                $_SESSION['player']->setLevel(6);
+            }
             $f3->set('level', $_SESSION['player']->getLevel());
 
             require "pages/toolBar.php";
@@ -127,6 +139,12 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 
         //LEVEL 7
         case '7':
+            if ($_SESSION['player']->getLevel() < 7) {
+                dbFunctions::setLevel($_SESSION['player']->getName(), 7);
+                $_SESSION['player']->setLevel(7);
+            }
+            $f3->set('level', $_SESSION['player']->getLevel());
+
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/7.php');
