@@ -32,7 +32,7 @@ if(!empty($_POST["username"])) {
     //check if username is already in use
     if($check > 0)
         {
-            echo "<span class='status-not-available'> Username Not Available.</span>";
+            echo "<span class='status-not-available'> Username Already Taken.</span>";
             return false;
         }
     }
