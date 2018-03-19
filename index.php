@@ -44,20 +44,10 @@ $f3->route('POST /signup', function ($f3) {
 
     if (validUsername($username))
     {
+        $_SESSION['player'] = new Player($username, 1);
         dbFunctions::insertUser($username, $password, $level);
         echo Template::instance()->render("pages/signup.html");
     }
-
-    //IT WORKS UP TO HERE. BUT IF THE USERNAME ISNT VALID THEN IT STILL LETS USER MAKE DUPLICATE USERNAME
-    else
-        {
-            //this didn't work ;(
-            $f3->reroute('signup');
-        }
-
-
-
-
 });
 
 
@@ -71,6 +61,12 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 
 //MENU
         case 'menu' :
+            if ($_SESSION['player']->getLevel() < 2) {
+                dbFunctions::setLevel($_SESSION['player']->getName(), 2);
+                $_SESSION['player']->setLevel(2);
+            }
+
+            $f3->set('level', $_SESSION['player']->getLevel());
 
             //set route
             echo Template::instance()->render('pages/menu.html');
@@ -91,12 +87,18 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 
 //LEVEL 3
         case '3':
+            $_SESSION['player']->setLevel(3);
+            $f3->set('level', $_SESSION['player']->getLevel());
+
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/3.php');
             break;
 //LEVEL 4
         case '4':
+            $_SESSION['player']->setLevel(4);
+            $f3->set('level', $_SESSION['player']->getLevel());
+
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/4.php');
@@ -104,6 +106,9 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 
         //LEVEL 5
         case '5':
+            $_SESSION['player']->setLevel(5);
+            $f3->set('level', $_SESSION['player']->getLevel());
+
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/5.php');
@@ -112,6 +117,9 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 
         //LEVEL 6
         case '6':
+            $_SESSION['player']->setLevel(6);
+            $f3->set('level', $_SESSION['player']->getLevel());
+
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/6.php');
