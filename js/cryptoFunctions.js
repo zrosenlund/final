@@ -1,3 +1,6 @@
+
+
+//NUMBERS TO LETTERS FUNCTION ****************
 function numbersToLetters(string) {
     string = string.toLowerCase();
     return string.split(' ').map(function(c){
@@ -5,6 +8,7 @@ function numbersToLetters(string) {
     }).join(' ');
 }
 
+//LETTERS TO NUMBERS FUNCTION ****************
 function lettersToNumbers(string){
     string = string.toLowerCase();
     return string.split('').map(function(c){
@@ -26,7 +30,7 @@ function lettersToNumbers(string){
         };
     };
 
-    // binary to decimal
+    // BINARY TO DECIMAL FUNCTION*************
     ConvertBase.bin2dec = function (num) {
         return ConvertBase(num).from(2).to(10);
     };
