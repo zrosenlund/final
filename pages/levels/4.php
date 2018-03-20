@@ -34,7 +34,7 @@ error_reporting(E_ALL);
 <div class="d-flex flex-row h-100" id="body">
 
     <div class="w-100 d-flex justify-content-center align-items-center p-10" id="main">
-        <h2 class="display-1">5</h2>
+        <h2 class="display-1">levels/5</h2>
     </div>
 
 </div>
