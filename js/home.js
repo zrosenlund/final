@@ -76,7 +76,7 @@ $(document).ready(function(){
         {
             $('#checkPassword').html('Passwords do not match');
         }
-        else if (password === password2)
+        else if (password1 === password2)
         {
             $('#checkPassword').html('');
         }
