@@ -72,19 +72,15 @@ error_reporting(E_ALL);
 
     </div><!-- close puzzle div-->
 </div> <!--close body div-->
-
     <footer id="footer" class="d-flex w-100 justify-content-center align-items-center mx-auto text-center">
         <div class="form-group">
             <input type="text" class="form-control text-center" id="inputAnswer">
         </div>
     </footer>
 
-
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="../js/5.js"></script>
 <script src="../js/2.js"></script>
-
-
+<script src="../js/5.js"></script>
 </body>
 </html>
