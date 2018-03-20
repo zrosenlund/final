@@ -2,9 +2,7 @@
 //** BODY FUNCTIONS
 //****************************************************************************************
 //boolean to show footer
-$('#footer').css("opacity", "0");
-
-var showFooter = false;
+$('#footer').hide();
 
 //function run when correct answer is input
 $('#inputAnswer').on('keyup', function() {
@@ -13,24 +11,10 @@ $('#inputAnswer').on('keyup', function() {
 
     if (answer === 'next')
     {
-        showFooter = true;
         $('#puzzle').fadeOut("slow");
         window.location.replace("shash").delay("slow");
     }
 });
-
-//****************************************************************************************
-// ** FOOTER FUNCTIONS
-//****************************************************************************************
-
-//this will show the footer bar when enter is pressed
-
-    if (showFooter = true)
-    {
-        // Enter key pressed
-        $('#footer').css("opacity", "1");
-    };
-
 
 //*****************************************************************************************
 //** IMAGE MAP FUNCTIONS
@@ -40,7 +24,8 @@ $('#inputAnswer').on('keyup', function() {
 function winner()
 {
     $("#differences").hide();
-    $( "#results" ).replaceWith( "<h1>Passcode: next." );
+    $("#results").replaceWith("<h1>Passcode: NEXT</h1>");
+    $('#footer').show();
 }
 
 function addToFound()
