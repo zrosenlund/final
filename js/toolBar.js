@@ -11,13 +11,6 @@ $("#link1").click(function(){
     $("#result1").html("");
 });
 
-//make tool one run on enter
-$("#decode1").keyup(function(event) {
-    if (event.keyCode === 13) {
-        $("#submit1").click();
-    }
-});
-
 // text input when submit button is hit
 $("#submit1").on("click", function() {
     var input = $("#decode1").val();
@@ -41,13 +34,6 @@ $("#link2").click(function(){
     $("#result2").html("");
 });
 
-//make second tool run when enter is pressed
-$("#decode2").keyup(function(event) {
-    if (event.keyCode === 13) {
-        $("#submit2").click();
-    }
-});
-
 // text input when submit button is hit
 $("#submit2").on("click", function() {
     var input = $("#decode2").val();
@@ -69,13 +55,6 @@ $("#link3").click(function(){
     $("#decode2").hide();
     $("#submit2").hide();
     $("#result3").html("");
-});
-
-//make tool 3 run when enter button is hit
-$("#decode3").keyup(function(event) {
-    if (event.keyCode === 13) {
-        $("#submit3").click();
-    }
 });
 
 $("#submit3").on("click", function() {

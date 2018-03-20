@@ -2,21 +2,36 @@
 //** BODY FUNCTIONS
 //****************************************************************************************
 //boolean to show footer
-$('#footer').hide();
+$('#footer').css("opacity", "0");
+
+var showFooter = false;
 
 //function run when correct answer is input
 $('#inputAnswer').on('keyup', function() {
     var answer = $('#inputAnswer').val();
     answer = answer.toLowerCase();
 
-    if (answer === 'next')
-    {
+    if (answer === 'next') {
         $('#puzzle').fadeOut("slow");
         window.location.replace("shash").delay("slow");
     }
-});
+})
 
-//*****************************************************************************************
+//this will show the footer bar when enter is pressed
+$(document).keypress(function (e) {
+    if ((e.keyCode || e.which) == 13) {
+        // Enter key pressed
+        if (showFooter)
+        {
+            showFooter = false;
+            $('#footer').css("opacity", "0");
+        }
+        else {
+            showFooter = true;
+            $('#footer').css("opacity", "1");
+        }
+    }
+});
 //** IMAGE MAP FUNCTIONS
 //*****************************************************************************************
 
