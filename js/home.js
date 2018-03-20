@@ -50,7 +50,6 @@ $(document).ready(function(){
         $('.circle').prop('src', '../final/images/circle-outline.png');
         $('#titleScreen').delay("slow").fadeIn("slow");
     })
-<<<<<<< HEAD
 
     $('#createUsername').on('blur', function() {
         checkAvailability();
@@ -91,6 +90,4 @@ $(document).ready(function(){
             $('#login').submit();
         }
     });
-=======
->>>>>>> 20d5f68ec1ff6b419d2383ad91c0f248365b7f58
 });

@@ -50,14 +50,12 @@ $f3->route('POST /signup', function ($f3) {
     }
 });
 
-//****************************************************** SIGN UP *********************************
-$f3->route('POST /signin', function ($f3) {
-
-    require_once('model/validation.php');
+//****************************************************** SIGN IN *********************************
+$f3->route('GET|POST /signin', function ($f3) {
 
     $_SESSION['username'] = $_POST['inputUsername'];
     $_SESSION['password'] = $_POST['inputPassword1'];
-    $f3->set('playerName', $_SESSION['username']);
+    $f3->set('playerName', $_POST['inputUsername']);
 
     $username = $_SESSION['username'];
 
