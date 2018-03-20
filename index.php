@@ -86,20 +86,20 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
             break;
 
 //LEVEL 1
-        case '1' :
+        case 'yak' :
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/1.php');
             break;
 //LEVEL 2
-        case '2':
+        case 'du':
             require "pages/toolBar.php";
 
             echo Template::instance()->render('pages/levels/2.php');
             break;
 
 //LEVEL 3
-        case '3':
+        case 'sey':
             if ($_SESSION['player']->getLevel() < 3) {
                 dbFunctions::setLevel($_SESSION['player']->getName(), 3);
                 $_SESSION['player']->setLevel(3);
@@ -111,7 +111,7 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
             echo Template::instance()->render('pages/levels/3.php');
             break;
 //LEVEL 4
-        case '4':
+        case 'char':
             if ($_SESSION['player']->getLevel() < 4) {
                 dbFunctions::setLevel($_SESSION['player']->getName(), 4);
                 $_SESSION['player']->setLevel(4);
@@ -138,7 +138,7 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
 
 
         //LEVEL 6
-        case '6':
+        case 'shash':
             if ($_SESSION['player']->getLevel() < 6) {
                 dbFunctions::setLevel($_SESSION['player']->getName(), 6);
                 $_SESSION['player']->setLevel(6);
@@ -151,7 +151,7 @@ $f3->route('GET /levels/@pageName', function ($f3, $params) {
             break;
 
         //LEVEL 7
-        case '7':
+        case 'haft':
             if ($_SESSION['player']->getLevel() < 7) {
                 dbFunctions::setLevel($_SESSION['player']->getName(), 7);
                 $_SESSION['player']->setLevel(7);
