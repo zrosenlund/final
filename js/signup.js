@@ -9,6 +9,6 @@ $(document).ready(function(){
 
     $('#goToLevel1').on('click', function() {
         $('#message').fadeOut("slow");
-        window.location.replace("levels/1");
+        window.location.replace("levels/yak");
     })
 });
