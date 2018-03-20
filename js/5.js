@@ -2,7 +2,10 @@
 //** BODY FUNCTIONS
 //****************************************************************************************
 //boolean to show footer
+$('#footer').css("opacity", "0");
+
 var showFooter = false;
+
 //function run when correct answer is input
 $('#inputAnswer').on('keyup', function() {
     var answer = $('#inputAnswer').val();
@@ -37,7 +40,7 @@ $('#inputAnswer').on('keyup', function() {
 function winner()
 {
     $("#differences").hide();
-    $( "#results" ).replaceWith( "<h1>You win! Password for the level is 'next'. <br> Press enter to bring up text input</h1>" );
+    $( "#results" ).replaceWith( "<h1>Passcode: next." );
 }
 
 function addToFound()
