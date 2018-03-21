@@ -60,10 +60,12 @@ $(document).ready(function(){
     });
 
     $('#newUserSubmit').on('click', function() {
-        var username = $('#checkAvailabilty').html();
-        var password = $('#checkPassword').html();
+        var usernameField = $('#checkAvailabilty').html();
+        var passwordField = $('#checkPassword').html();
+        var username = $('#createUsername').val();
+        var password = $('#createPassword1').val();
 
-        if (username === "" && password === "")
+        if (usernameField === "" && passwordField === "" && username !== "" || password !== "")
         {
             $('#signup').submit();
         }
@@ -83,9 +85,11 @@ $(document).ready(function(){
     });
 
     $('#loginUser').on('click', function() {
-        var password = $('#verifyPassword').html();
+        var passwordField = $('#verifyPassword').html();
+        var username = $('#inputUsername').val();
+        var password = $('#inputPassword1').val();
 
-        if (password === "")
+        if (passwordField === "" && username !== "" || password !== "")
         {
             $('#login').submit();
         }

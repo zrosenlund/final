@@ -5,8 +5,8 @@
  * Date: 3/15/2018
  * Time: 4:03 PM
  */
-require_once("/home/selkhart/config.php");
-class dbFunctions implements level
+require_once("/home/zrosenlu/config.php");
+class dbFunctions
 {
 
     static function connect()
@@ -22,20 +22,19 @@ class dbFunctions implements level
         }
     }
 
-    static function getMembers()
+    static function getUser($username)
     {
         $dbh = dbFunctions::connect();
         //1. Define the query
-        $sql = "SELECT * FROM users ORDER BY username";
-
+        $sql = "SELECT * FROM users WHERE username = :username";
         //2. Prepare the statement
         $statement = $dbh->prepare($sql);
         //3. Bind parameters
-
+        $statement->bindParam(':username', $username, PDO::PARAM_STR);
         //4. Execute the query
         $statement->execute();
         //5. Get the results
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
         //print_r($result);
         return $result;
     }
