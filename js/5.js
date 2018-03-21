@@ -39,7 +39,7 @@ $(document).keypress(function (e) {
 function winner()
 {
     $("#differences").hide();
-    $("#results").replaceWith("<h1>Passcode: NEXT</h1>");
+    $("#results").replaceWith("<h1>Passcode: NEXT</h1><h2>Press ENTER to bring up the answer bar</h2>");
     $('#footer').show();
 }
 

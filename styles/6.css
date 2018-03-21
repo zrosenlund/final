@@ -1,8 +1,11 @@
+#main {
+    margin-top: 0;
+}
 
 img {
     width: 450px;
     margin-right: 200px;
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 #code{
@@ -18,7 +21,7 @@ img {
 #puzzle{
     margin-right: 100px;
 }
-#plans
-{
-    padding-top: 10px;
+#plans {
+    padding-top: 0;
+    margin-top: 0;
 }
