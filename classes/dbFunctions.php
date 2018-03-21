@@ -67,13 +67,13 @@ class dbFunctions
         $dbh = dbFunctions::connect();
 
         //Define the query
-        $sql = "INSERT INTO users( level)
-        VALUES (:level)";
+        $sql = "UPDATE users SET level = :level WHERE username = :username";
 
         //prepare
         $statement = $dbh->prepare($sql);
 
         //bind
+        $statement->bindParam(':username', $username, PDO::PARAM_STR);
         $statement->bindParam(':level', $level, PDO::PARAM_INT);
 
         //execute
