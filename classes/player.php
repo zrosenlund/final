@@ -15,7 +15,6 @@ class Player
         $this->_name = $_name;
         $this->_level = $_level;
     }
-
     /**
      * @return mixed
      */
@@ -47,6 +46,4 @@ class Player
     {
         $this->_level = $level;
     }
-
-
 }

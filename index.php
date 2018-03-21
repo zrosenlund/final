@@ -28,7 +28,7 @@ $f3->route('GET /', function () {
 );
 
 //****************************************************** SIGN UP *********************************
-$f3->route('POST /signup', function ($f3) {
+$f3->route('GET|POST /signup', function ($f3) {
 
     require_once('model/validation.php');
 
